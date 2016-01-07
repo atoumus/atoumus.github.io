@@ -29,26 +29,4 @@
     
   </entry>
   
-  <entry>
-    <title><![CDATA[Hello Hexo]]></title>
-    <link href="http://atoumus.github.io/Etc/hello-hexo.html"/>
-    <id>http://atoumus.github.io/Etc/hello-hexo.html</id>
-    <published>2015-12-31T05:25:26.000Z</published>
-    <updated>2016-01-05T05:51:21.383Z</updated>
-    <content type="html"><![CDATA[<p>hello</p>
-<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p><footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[rectangle setX: <span class="number">10</span> y: <span class="number">10</span> width: <span class="number">20</span> height: <span class="number">20</span>];</span><br></pre></td></tr></table></figure>
-
-<img class="{% asset_path UjQuHcb.png"> Настройки сети (без фенсибокс) %}<br><br>
-
-<a href="https://hexo.io/docs/tag-plugins.html" title="Ссылка на внешнюю страницу" target="_blank" rel="external">Ссылка на внешнюю страницу</a>
-
-content]]></content>
-    <summary type="html">
-    <![CDATA[<p>hello</p>
-<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p><footer><st]]>
-    </summary>
-    
-  </entry>
-  
 </feed>
