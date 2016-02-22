@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://atoumus.github.io/"/>
-  <updated>2016-02-16T05:11:15.016Z</updated>
+  <updated>2016-02-22T04:56:14.976Z</updated>
   <id>http://atoumus.github.io/</id>
   
   <author>
@@ -15,11 +15,54 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[PHP - определяем страну пользователя по IP]]></title>
+    <link href="http://atoumus.github.io/PHP/php-detect-country-by-ip.html"/>
+    <id>http://atoumus.github.io/PHP/php-detect-country-by-ip.html</id>
+    <published>2016-02-16T05:54:02.000Z</published>
+    <updated>2016-02-22T04:56:14.976Z</updated>
+    <content type="html"><![CDATA[<p>В продолжение темы про IP, в этой статье будут рассмотрены способы определения IP пользователя в PHP.</p>
+<a id="more"></a>
+<h2 id="GeoIP"><a href="#GeoIP" class="headerlink" title="GeoIP"></a>GeoIP</h2><p>Навреное самая часто используемая библиотека для определения IP.</p>
+<p>Установка на Ubuntu Server:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php5-geoip</span><br></pre></td></tr></table></figure>
+<p>После установки скачиваем последние обновления базы IP адресов:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo wget -N http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz</span><br><span class="line">sudo gunzip GeoIP.dat.gz</span><br><span class="line">sudo mv GeoIP.dat /usr/share/GeoIP/</span><br></pre></td></tr></table></figure>
+<p>После этих действий необходимо перезагрузить PHP. Это нужно для того что бы PHP интерпретатор подгрузил только что установленное расширение (php5-geoip) и новые базы IP адресов.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo service php5-fpm restart <span class="comment"># если вы используете NGINX</span></span><br><span class="line"><span class="comment"># или</span></span><br><span class="line">sudo service apache2 restart <span class="comment"># если вы используете Apache</span></span><br></pre></td></tr></table></figure>
+<p>Также переодически необходимо обновлять базы IP адресов:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo wget -N http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz</span><br><span class="line">sudo gunzip GeoIP.dat.gz</span><br><span class="line">sudo mv GeoIP.dat /usr/share/GeoIP/</span><br></pre></td></tr></table></figure>
+<p>После обновления так же необходимо перезагружать PHP для примененеия обновленной базы IP адресов:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo service php5-fpm restart <span class="comment"># если вы используете NGINX</span></span><br><span class="line"><span class="comment"># или</span></span><br><span class="line">sudo service apache2 restart <span class="comment"># если вы используете Apache</span></span><br></pre></td></tr></table></figure>
+<p>После того как GeoIP установлен, его можно использовать в коде для определения страны пользователя по его IP, например так:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"><span class="variable">$countryCode</span> = geoip_country_code_by_name(<span class="variable">$_SERVER</span>[<span class="string">'REMOTE_ADDR'</span>]);</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$countryCode</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="u041E_u043D_u043B_u0430_u0439_u043D__u0441_u0435_u0440_u0432_u0438_u0441_u044B__u0434_u043B_u044F__u0433_u0435_u043E_u0442_u0430_u0440_u0433_u0435_u0442_u0438_u043D_u0433_u0430"><a href="#u041E_u043D_u043B_u0430_u0439_u043D__u0441_u0435_u0440_u0432_u0438_u0441_u044B__u0434_u043B_u044F__u0433_u0435_u043E_u0442_u0430_u0440_u0433_u0435_u0442_u0438_u043D_u0433_u0430" class="headerlink" title="Онлайн сервисы для геотаргетинга"></a>Онлайн сервисы для геотаргетинга</h2><p>В качестве альтернативы можно использовать специальные онлайн сервисы. Принцип их работы прост: передаем GET параметром IP и в ответ получаем гео-инфу в формате JSON или XML.</p>
+<p>Преимущество этого способы в том, что его можно использовать не только на стороне PHP, но и на стороне например JavaScript.</p>
+<p>Недостаток в том, что в самый неподходящий момент онлайн сервис может вас забанить за частые обращения :) или просто упасть.</p>
+<p>Вот несколько таких онлайн сервисов:</p>
+<ul>
+<li><a href="http://ipgeobase.ru:7020/geo?ip=89.163.220.14" target="_blank" rel="external">ipgeobase.ru</a></li>
+<li><a href="http://www.geoplugin.net/json.gp?ip=89.163.220.14" target="_blank" rel="external">geoplugin.net</a></li>
+<li><a href="http://api.sypexgeo.net/json/89.163.220.14" target="_blank" rel="external">sypexgeo.net</a>
+</li>
+</ul>
+<h2 id="u0417_u0430_u043A_u043B_u044E_u0447_u0435_u043D_u0438_u0435"><a href="#u0417_u0430_u043A_u043B_u044E_u0447_u0435_u043D_u0438_u0435" class="headerlink" title="Заключение"></a>Заключение</h2><p>Лучше использовать GeoIP, который установлен на вашем сервере. Т.к. работать он будет всегда, и вы всегда можете обновить базы IP адресов.</p>
+<p>Если же использование GeoIP на своем сервере по какой-то причине не возможно, тогда остается использовать онлайн сервисы. Но обязательно нужно сделать кеширование запросов на эти сервисы в свою БД. Кеширование нужно для того что бы не отправлять один и тот же запрос по много раз. Достаточно один раз получить гео-инфу по интересующему ИП через онлайн сервис, после чего сохранить ее к себе в БД, и далее брать уже из БД. Таким образом вы уменьшите кол-во запросов на онлайн сервис и уменьшите вероятность того что онлайн сервис вас заблокирует за множественные запросы :)</p>
+<p>Так же вы можете почитать о том, <a href="/Etc/test-site-by-other-country-ip.html" title="как проверить сайт под IP другой страны через прокси сервер">как проверить сайт под IP другой страны через прокси сервер</a>.</p>]]></content>
+    <summary type="html">
+    <![CDATA[<p>В продолжение темы про IP, в этой статье будут рассмотрены способы определения IP пользователя в PHP.</p>]]>
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://atoumus.github.io/categories/PHP/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Как проверить сайт под IP другой страны через прокси сервер]]></title>
     <link href="http://atoumus.github.io/Etc/test-site-by-other-country-ip.html"/>
     <id>http://atoumus.github.io/Etc/test-site-by-other-country-ip.html</id>
     <published>2016-02-07T05:14:02.000Z</published>
-    <updated>2016-02-16T05:11:15.016Z</updated>
+    <updated>2016-02-22T04:57:48.627Z</updated>
     <content type="html"><![CDATA[<p>Иногда возникает необходимость зайти на свой сайт под IP другой страны. Например что бы проверить ту или иную функциональность, которая работает по разному в зависимости с IP какой страны зашел пользователь. В этой статье будут рассмотрены способы как это можно удобно сделать.</p>
 <a id="more"></a>
 <p>Это можно сделать тремя способами:</p>
@@ -112,7 +155,8 @@
 <p>После регистрации вам дается 7-ми дневный премиум период с доступом ко всему списку стран доступному в этом сервисе. Вы можете переключатся между странами используя меню плагина ZenMate в браузере.</p>
 <p>После окончания 7-ми дневного бесплатного премиум периода, вы можете продолжать пользоватся плагином, но список стран для вас будет ограничен. Или же мы можете заплатить и продолжать пользоваться всем списком стран.</p>
 <h2 id="u0417_u0430_u043A_u043B_u044E_u0447_u0435_u043D_u0438_u0435"><a href="#u0417_u0430_u043A_u043B_u044E_u0447_u0435_u043D_u0438_u0435" class="headerlink" title="Заключение"></a>Заключение</h2><p>В заключение хочу сказать, что для меня самый удобный, быстрый и безопасный способ использования прокси это Tor браузер.</p>
-<p>Если же по какой то причине Tor использовать не получается, то можно воспользоватся списком бесплатных прокси серверов, но только в анонимном режиме браузера Google Chrome.</p>]]></content>
+<p>Если же по какой то причине Tor использовать не получается, то можно воспользоватся списком бесплатных прокси серверов, но только в анонимном режиме браузера Google Chrome.</p>
+<p>Так же вы можете почитать о том, <a href="/PHP/php-detect-country-by-ip.html" title="как в PHP определить страну пользователя по IP">как в PHP определить страну пользователя по IP</a>.</p>]]></content>
     <summary type="html">
     <![CDATA[<p>Иногда возникает необходимость зайти на свой сайт под IP другой страны. Например что бы проверить ту или иную функциональность, которая работает по разному в зависимости с IP какой страны зашел пользователь. В этой статье будут рассмотрены способы как это можно удобно сделать.</p>]]>
     

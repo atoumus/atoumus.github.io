@@ -8,7 +8,15 @@
 
     <url>
         <loc>http://atoumus.github.io/Etc/test-site-by-other-country-ip.html</loc>
-        <lastmod>2016-02-16T05:11:15.016Z</lastmod>
+        <lastmod>2016-02-22T04:57:48.627Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://atoumus.github.io/PHP/php-detect-country-by-ip.html</loc>
+        <lastmod>2016-02-22T04:56:14.976Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
