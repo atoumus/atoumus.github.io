@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://atoumus.github.io/"/>
-  <updated>2016-02-22T04:56:14.976Z</updated>
+  <updated>2016-02-22T05:23:11.478Z</updated>
   <id>http://atoumus.github.io/</id>
   
   <author>
@@ -19,10 +19,10 @@
     <link href="http://atoumus.github.io/PHP/php-detect-country-by-ip.html"/>
     <id>http://atoumus.github.io/PHP/php-detect-country-by-ip.html</id>
     <published>2016-02-16T05:54:02.000Z</published>
-    <updated>2016-02-22T04:56:14.976Z</updated>
+    <updated>2016-02-22T05:23:11.478Z</updated>
     <content type="html"><![CDATA[<p>В продолжение темы про IP, в этой статье будут рассмотрены способы определения IP пользователя в PHP.</p>
 <a id="more"></a>
-<h2 id="GeoIP"><a href="#GeoIP" class="headerlink" title="GeoIP"></a>GeoIP</h2><p>Навреное самая часто используемая библиотека для определения IP.</p>
+<h2 id="GeoIP"><a href="#GeoIP" class="headerlink" title="GeoIP"></a>GeoIP</h2><p>Навреное самая часто используемая библиотека для определения IP (<a href="http://php.net/manual/ru/book.geoip.php" target="_blank" rel="external">оф. док на php.net</a>).</p>
 <p>Установка на Ubuntu Server:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php5-geoip</span><br></pre></td></tr></table></figure>
 <p>После установки скачиваем последние обновления базы IP адресов:</p>
