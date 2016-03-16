@@ -7,7 +7,7 @@
     </url>
 
     <url>
-        <loc>http://atoumus.github.io/PHP/2016-php-trends.html</loc>
+        <loc>http://atoumus.github.io/2016-php-trends.html</loc>
         <lastmod>2016-03-16T11:52:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -15,7 +15,7 @@
     </url>
 
     <url>
-        <loc>http://atoumus.github.io/PHP/php-detect-country-by-ip.html</loc>
+        <loc>http://atoumus.github.io/php-detect-country-by-ip.html</loc>
         <lastmod>2016-03-16T10:26:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -23,7 +23,7 @@
     </url>
 
     <url>
-        <loc>http://atoumus.github.io/Etc/test-site-by-other-country-ip.html</loc>
+        <loc>http://atoumus.github.io/test-site-by-other-country-ip.html</loc>
         <lastmod>2016-02-22T04:57:48.627Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -31,7 +31,7 @@
     </url>
 
     <url>
-        <loc>http://atoumus.github.io/Etc/init-post.html</loc>
+        <loc>http://atoumus.github.io/init-post.html</loc>
         <lastmod>2016-01-07T06:35:21.412Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

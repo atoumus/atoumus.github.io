@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[PHP - получаем гео-инфо пользователя по IP]]></title>
-    <link href="http://atoumus.github.io/PHP/php-detect-country-by-ip.html"/>
-    <id>http://atoumus.github.io/PHP/php-detect-country-by-ip.html</id>
+    <link href="http://atoumus.github.io/php-detect-country-by-ip.html"/>
+    <id>http://atoumus.github.io/php-detect-country-by-ip.html</id>
     <published>2016-02-16T05:54:02.000Z</published>
     <updated>2016-03-16T10:26:02.000Z</updated>
     <content type="html"><![CDATA[<p>В продолжение темы про IP, в этой статье будут рассмотрены способы определения страны, города и другой гео-ино о пользователе по его IP.</p>
@@ -108,7 +108,7 @@
 <p>Если нет возможности установить GeoIP в виде PHP расширения, то можно использовать один из composer пакетов: GeoIP, Sypex Geo, IP2LOCATION или TabGeo.</p>
 <p>Если же использование composer пакета по какой-то причине не возможно, тогда остается использовать онлайн сервисы. Но обязательно нужно сделать кеширование запросов на эти сервисы в свою БД. Кеширование нужно для того что бы не отправлять один и тот же запрос по много раз. Достаточно один раз получить гео-инфу по интересующему ИП через онлайн сервис, после чего сохранить ее к себе в БД, и далее брать уже из БД. Таким образом вы уменьшите кол-во запросов на онлайн сервис и уменьшите вероятность того что онлайн сервис вас заблокирует за множественные запросы.</p>
 <p>Стоит заметить, что почти у всех вышеперечисленных библиотек есть бесплатные и платные версии. В платных версиях вам будет доступно больше гео инфы чем в бесплатных.</p>
-<p>Так же вы можете почитать о том, <a href="/Etc/test-site-by-other-country-ip.html" title="как проверить сайт под IP другой страны через прокси сервер">как проверить сайт под IP другой страны через прокси сервер</a>.</p>]]></content>
+<p>Так же вы можете почитать о том, <a href="/test-site-by-other-country-ip.html" title="как проверить сайт под IP другой страны через прокси сервер">как проверить сайт под IP другой страны через прокси сервер</a>.</p>]]></content>
     <summary type="html">
     <![CDATA[<p>В продолжение темы про IP, в этой статье будут рассмотрены способы определения страны, города и другой гео-ино о пользователе по его IP.</p>]]>
     
@@ -120,8 +120,8 @@
   
   <entry>
     <title><![CDATA[Как проверить сайт под IP другой страны через прокси сервер]]></title>
-    <link href="http://atoumus.github.io/Etc/test-site-by-other-country-ip.html"/>
-    <id>http://atoumus.github.io/Etc/test-site-by-other-country-ip.html</id>
+    <link href="http://atoumus.github.io/test-site-by-other-country-ip.html"/>
+    <id>http://atoumus.github.io/test-site-by-other-country-ip.html</id>
     <published>2016-02-07T05:14:02.000Z</published>
     <updated>2016-02-22T04:57:48.627Z</updated>
     <content type="html"><![CDATA[<p>Иногда возникает необходимость зайти на свой сайт под IP другой страны. Например что бы проверить ту или иную функциональность, которая работает по разному в зависимости с IP какой страны зашел пользователь. В этой статье будут рассмотрены способы как это можно удобно сделать.</p>
@@ -217,7 +217,7 @@
 <p>После окончания 7-ми дневного бесплатного премиум периода, вы можете продолжать пользоватся плагином, но список стран для вас будет ограничен. Или же мы можете заплатить и продолжать пользоваться всем списком стран.</p>
 <h2 id="u0417_u0430_u043A_u043B_u044E_u0447_u0435_u043D_u0438_u0435"><a href="#u0417_u0430_u043A_u043B_u044E_u0447_u0435_u043D_u0438_u0435" class="headerlink" title="Заключение"></a>Заключение</h2><p>В заключение хочу сказать, что для меня самый удобный, быстрый и безопасный способ использования прокси это Tor браузер.</p>
 <p>Если же по какой то причине Tor использовать не получается, то можно воспользоватся списком бесплатных прокси серверов, но только в анонимном режиме браузера Google Chrome.</p>
-<p>Так же вы можете почитать о том, <a href="/PHP/php-detect-country-by-ip.html" title="как в PHP определить страну пользователя по IP">как в PHP определить страну пользователя по IP</a>.</p>]]></content>
+<p>Так же вы можете почитать о том, <a href="/php-detect-country-by-ip.html" title="как в PHP определить страну пользователя по IP">как в PHP определить страну пользователя по IP</a>.</p>]]></content>
     <summary type="html">
     <![CDATA[<p>Иногда возникает необходимость зайти на свой сайт под IP другой страны. Например что бы проверить ту или иную функциональность, которая работает по разному в зависимости с IP какой страны зашел пользователь. В этой статье будут рассмотрены способы как это можно удобно сделать.</p>]]>
     
@@ -229,8 +229,8 @@
   
   <entry>
     <title><![CDATA[Что учить PHP разработчику в 2016 году]]></title>
-    <link href="http://atoumus.github.io/PHP/2016-php-trends.html"/>
-    <id>http://atoumus.github.io/PHP/2016-php-trends.html</id>
+    <link href="http://atoumus.github.io/2016-php-trends.html"/>
+    <id>http://atoumus.github.io/2016-php-trends.html</id>
     <published>2016-01-31T11:22:02.000Z</published>
     <updated>2016-03-16T11:52:00.000Z</updated>
     <content type="html"><![CDATA[<p>Что должен знать современный PHP разработчик?</p>
@@ -295,8 +295,8 @@
   
   <entry>
     <title><![CDATA[Init post]]></title>
-    <link href="http://atoumus.github.io/Etc/init-post.html"/>
-    <id>http://atoumus.github.io/Etc/init-post.html</id>
+    <link href="http://atoumus.github.io/init-post.html"/>
+    <id>http://atoumus.github.io/init-post.html</id>
     <published>2016-01-07T06:31:41.000Z</published>
     <updated>2016-01-07T06:35:21.412Z</updated>
     <content type="html"><![CDATA[<p>Hello from <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a> :)</p>]]></content>
