@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://atoumus.github.io/art-of-mind.html</loc>
+        <lastmod>2016-03-17T04:57:26.493Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://atoumus.github.io/init-post.html</loc>
         <lastmod>2016-03-16T12:18:55.429Z</lastmod>
         <changefreq>weekly</changefreq>
