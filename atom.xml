@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://atoumus.github.io/"/>
-  <updated>2016-03-17T05:15:50.935Z</updated>
+  <updated>2016-04-02T04:45:11.152Z</updated>
   <id>http://atoumus.github.io/</id>
   
   <author>
@@ -13,6 +13,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[PHP - Управление cron'ом с помощью cron_manager.sh]]></title>
+    <link href="http://atoumus.github.io/php-manage-cron-sh.html"/>
+    <id>http://atoumus.github.io/php-manage-cron-sh.html</id>
+    <published>2016-04-02T03:47:02.000Z</published>
+    <updated>2016-04-02T04:45:11.152Z</updated>
+    <content type="html"><![CDATA[<p>В каждом PHP проекте есть скрипты которые нужно запускать по крону. Когда таких скриптов становиться много, то возникает необходимость их хранить в каком-то конфиге проекта. А если еще и нет root доступа к серверу, то каждый раз дергать админа что бы он поставил какой то скрипт на крон, совсем не удобно. В этой статье пойдет речь о том, как управлять cron задачами в проекте, не имея root прав, с помощью скрипта <a href="https://github.com/atoumus/cron_manager.sh" target="_blank" rel="external">cron_manager.sh</a>.</p>
+<a id="more"></a>
+<p>Скрипт <a href="https://github.com/atoumus/cron_manager.sh" target="_blank" rel="external">cron_manager.sh</a> представляет собой удобный инструмент, который может считывать конфиги cron задач лежащие в папке проекта, и на их осное добавлять/изменять/удалять cron задачи в ОС сервера. Для этого скрипта не требуются root права. Cron задачи сохраняются в cron файл, который принадлежит текущему linux пользователю.</p>
+<p>Скрипт <strong>cron_manager.sh не привязан конкретно к PHP</strong>, он может управлять задачами cron и в любых других проектах. Мы же рассмотрим пример именно с PHP для наглядности.</p>
+<p>Скрипт имеет две команды:</p>
+<ul>
+<li>update - для добавления/изменения/удаления cron задач на основе вашего конфига;</li>
+<li>clear - для удаления всех cron задач вашего проекта.</li>
+</ul>
+<p>Данный скрипт удобно использовать совместно с какой либо из систем CI, например Jenkins. Т.к. можно в скрипт сборки проекта написать команду, которая будет автоматически запускать cron_manager.sh.</p>
+<h2 id="u0423_u0441_u0442_u0430_u043D_u0430_u0432_u043B_u0438_u0432_u0430_u0435_u043C_cron_manager-sh__u0432__u041E_u0421_Linux"><a href="#u0423_u0441_u0442_u0430_u043D_u0430_u0432_u043B_u0438_u0432_u0430_u0435_u043C_cron_manager-sh__u0432__u041E_u0421_Linux" class="headerlink" title="Устанавливаем cron_manager.sh в ОС Linux"></a>Устанавливаем cron_manager.sh в ОС Linux</h2><p>Удобней всего будет установить cron_manager.sh глобально в Linux, для этого выполняем следующие команды:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo su</span><br><span class="line"><span class="comment"># cd /usr/local/bin/</span></span><br><span class="line"><span class="comment"># wget -O cron_manager https://raw.githubusercontent.com/atoumus/cron_manager.sh/master/cron_manager.sh</span></span><br><span class="line"><span class="comment"># chmod a+x cron_manager</span></span><br></pre></td></tr></table></figure>
+<p>После этих действий его можно будет просто запускать командой <code>$ cron_mananger</code>. </p>
+<h2 id="u0421_u043E_u0437_u0434_u0430_u0435_u043C__u043A_u043E_u043D_u0444_u0438_u0433__u0444_u0430_u0439_u043B"><a href="#u0421_u043E_u0437_u0434_u0430_u0435_u043C__u043A_u043E_u043D_u0444_u0438_u0433__u0444_u0430_u0439_u043B" class="headerlink" title="Создаем конфиг файл"></a>Создаем конфиг файл</h2><p>Прежде всего необходимо положить в проект конфиг файл, в котором будет храниться список cron задач. Название этого файла может быть каким угодно, расположение также не имеет значения. Формат записи cron задач в этом файле точно такой же как если бы вы добавляли задачи cron вручную. Пример содержания такого файла:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* * * * * /var/www/site.com/<span class="built_in">test</span>1.php</span><br><span class="line"></span><br><span class="line"><span class="comment"># Some comment</span></span><br><span class="line">* * * * * /var/www/site.com/<span class="built_in">test</span>2.php</span><br></pre></td></tr></table></figure>
+<p>Т.е. ничего особенного, просто cron задачи в обычном формате. Также в конфиг файле могут содержаться комментарии которые должны начинаться с символа <code>#</code>, они не будут добавлены в системный cron.</p>
+<h2 id="u041A_u043E_u043C_u0430_u043D_u0434_u0430_update"><a href="#u041A_u043E_u043C_u0430_u043D_u0434_u0430_update" class="headerlink" title="Команда update"></a>Команда update</h2><p>После того как конфиг создан, можно начинать использовать скрипт cron_manager.sh для добавления задач в cron.</p>
+<p>У скрипта cron_manager.sh есть одна важная особенность. Текущий каталог воспринимаеться как корневой каталог проекта. Поэтому <strong>обязательно необходимо перейти в корневой каталог проекта</strong>.</p>
+<p>Далее, из корневого каталога проекта, необходимо запустить команду update:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cron_manager update ./crontab</span><br></pre></td></tr></table></figure>
+<p>В выше приведенном примете <code>./crontab</code> и являеться конфигом со списком cron задач, который лежит в вашем проекте. Этот конфиг файл может находиться и в каком либо подкаталоге, необязательно в корне проекта.</p>
+<p>При выполнении команды <code>update</code> скрипт cron_manager.sh отобразит подробную инфо о том какие задачи были добавлены.</p>
+<p>Если в конфиге <code>./crontab</code> сделать какие либо изменеия и повторно запустить команду <code>update</code>, то сделанные изменения также применяться в системном cron’е.</p>
+<p>Так что все что нужно для управления cron задачами в проекте, это вносить их в конфиг файл и запускать команду <code>update</code> скрипта cron_manager.sh.</p>
+<h2 id="u041A_u043E_u043C_u0430_u043D_u0434_u0430_clear"><a href="#u041A_u043E_u043C_u0430_u043D_u0434_u0430_clear" class="headerlink" title="Команда clear"></a>Команда clear</h2><p>Данная команда позволяет очистить все cron задачи текущего проекта из системного cron’а. Это удобно например тогда, когда проект переносят в другое место на сервере, или вообще на другой сервер, и нужно из системного cron’а удалить все задачи которые относяться к проекту.</p>
+<p>Прежде всего <strong>переходим в корневую папку проекта</strong>. После этого запускаем команду <code>clear</code>, при этом конфиг cron задач проекта указывать уже не нужно:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cron_manager clear</span><br></pre></td></tr></table></figure>
+<p>При выполнении этой команды скрипт cron_manager.sh также выдаст подробную инфу о том какие именно задачи были удалены из системного cron’а. </p>]]></content>
+    <summary type="html">
+    <![CDATA[<p>В каждом PHP проекте есть скрипты которые нужно запускать по крону. Когда таких скриптов становиться много, то возникает необходимость их хранить в каком-то конфиге проекта. А если еще и нет root доступа к серверу, то каждый раз дергать админа что бы он поставил какой то скрипт на крон, совсем не удобно. В этой статье пойдет речь о том, как управлять cron задачами в проекте, не имея root прав, с помощью скрипта <a href="https://github.com/atoumus/cron_manager.sh">cron_manager.sh</a>.</p>]]>
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://atoumus.github.io/categories/PHP/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Книги - Искусство думать (Эдвард де Боно)]]></title>

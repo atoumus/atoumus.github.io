@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>PHP - Управление cron&#39;ом с помощью cron_manager.sh | Atoumus blog</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <meta name="description" content="В каждом PHP проекте есть скрипты которые нужно запускать по крону. Когда таких скриптов становиться много, то возникает необходимость их хранить в каком-то конфиге проекта. А если еще и нет root дост">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP - Управление cron'ом с помощью cron_manager.sh">
+<meta property="og:url" content="http://atoumus.github.io/php-manage-cron-sh.html">
+<meta property="og:site_name" content="Atoumus blog">
+<meta property="og:description" content="В каждом PHP проекте есть скрипты которые нужно запускать по крону. Когда таких скриптов становиться много, то возникает необходимость их хранить в каком-то конфиге проекта. А если еще и нет root дост">
+<meta property="og:updated_time" content="2016-04-02T04:45:11.152Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP - Управление cron'ом с помощью cron_manager.sh">
+<meta name="twitter:description" content="В каждом PHP проекте есть скрипты которые нужно запускать по крону. Когда таких скриптов становиться много, то возникает необходимость их хранить в каком-то конфиге проекта. А если еще и нет root дост">
+<meta name="twitter:creator" content="@atoumus">
+<link rel="publisher" href="https://plus.google.com/u/0/116624784918762784912">
+  
+    <link rel="alternative" href="/atom.xml" title="Atoumus blog" type="application/atom+xml">
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  <link href="//fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans:700,400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <div id="header-title">
+        <h1 id="logo-wrap">
+          <a href="/" id="logo">Atoumus blog
+          
+          </a>
+        </h1>
+      </div>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        
+          <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/atoumus" target="_blank" title="Twitter"></a>
+        
+        
+          <a id="nav-gplus-link" class="nav-icon" href="https://plus.google.com/u/0/116624784918762784912" target="_blank" title="Google plus"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Поиск"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Поиск"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://atoumus.github.io"></form>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="outer">
+        <section id="main"><article id="post-php-manage-cron-sh" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/php-manage-cron-sh.html" class="article-date">
+  <time datetime="2016-04-02T03:47:02.000Z" itemprop="datePublished">2016-04-02</time>
+</a>
+    <div class="article-category">
+    <a class="article-category-link" href="/categories/PHP/">PHP</a>
+  </div>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      PHP - Управление cron&#39;ом с помощью cron_manager.sh
+    </h1>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>В каждом PHP проекте есть скрипты которые нужно запускать по крону. Когда таких скриптов становиться много, то возникает необходимость их хранить в каком-то конфиге проекта. А если еще и нет root доступа к серверу, то каждый раз дергать админа что бы он поставил какой то скрипт на крон, совсем не удобно. В этой статье пойдет речь о том, как управлять cron задачами в проекте, не имея root прав, с помощью скрипта <a href="https://github.com/atoumus/cron_manager.sh" target="_blank" rel="external">cron_manager.sh</a>.</p>
+<a id="more"></a>
+<p>Скрипт <a href="https://github.com/atoumus/cron_manager.sh" target="_blank" rel="external">cron_manager.sh</a> представляет собой удобный инструмент, который может считывать конфиги cron задач лежащие в папке проекта, и на их осное добавлять/изменять/удалять cron задачи в ОС сервера. Для этого скрипта не требуются root права. Cron задачи сохраняются в cron файл, который принадлежит текущему linux пользователю.</p>
+<p>Скрипт <strong>cron_manager.sh не привязан конкретно к PHP</strong>, он может управлять задачами cron и в любых других проектах. Мы же рассмотрим пример именно с PHP для наглядности.</p>
+<p>Скрипт имеет две команды:</p>
+<ul>
+<li>update - для добавления/изменения/удаления cron задач на основе вашего конфига;</li>
+<li>clear - для удаления всех cron задач вашего проекта.</li>
+</ul>
+<p>Данный скрипт удобно использовать совместно с какой либо из систем CI, например Jenkins. Т.к. можно в скрипт сборки проекта написать команду, которая будет автоматически запускать cron_manager.sh.</p>
+<h2 id="u0423_u0441_u0442_u0430_u043D_u0430_u0432_u043B_u0438_u0432_u0430_u0435_u043C_cron_manager-sh__u0432__u041E_u0421_Linux"><a href="#u0423_u0441_u0442_u0430_u043D_u0430_u0432_u043B_u0438_u0432_u0430_u0435_u043C_cron_manager-sh__u0432__u041E_u0421_Linux" class="headerlink" title="Устанавливаем cron_manager.sh в ОС Linux"></a>Устанавливаем cron_manager.sh в ОС Linux</h2><p>Удобней всего будет установить cron_manager.sh глобально в Linux, для этого выполняем следующие команды:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo su</span><br><span class="line"><span class="comment"># cd /usr/local/bin/</span></span><br><span class="line"><span class="comment"># wget -O cron_manager https://raw.githubusercontent.com/atoumus/cron_manager.sh/master/cron_manager.sh</span></span><br><span class="line"><span class="comment"># chmod a+x cron_manager</span></span><br></pre></td></tr></table></figure>
+<p>После этих действий его можно будет просто запускать командой <code>$ cron_mananger</code>. </p>
+<h2 id="u0421_u043E_u0437_u0434_u0430_u0435_u043C__u043A_u043E_u043D_u0444_u0438_u0433__u0444_u0430_u0439_u043B"><a href="#u0421_u043E_u0437_u0434_u0430_u0435_u043C__u043A_u043E_u043D_u0444_u0438_u0433__u0444_u0430_u0439_u043B" class="headerlink" title="Создаем конфиг файл"></a>Создаем конфиг файл</h2><p>Прежде всего необходимо положить в проект конфиг файл, в котором будет храниться список cron задач. Название этого файла может быть каким угодно, расположение также не имеет значения. Формат записи cron задач в этом файле точно такой же как если бы вы добавляли задачи cron вручную. Пример содержания такого файла:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* * * * * /var/www/site.com/<span class="built_in">test</span>1.php</span><br><span class="line"></span><br><span class="line"><span class="comment"># Some comment</span></span><br><span class="line">* * * * * /var/www/site.com/<span class="built_in">test</span>2.php</span><br></pre></td></tr></table></figure>
+<p>Т.е. ничего особенного, просто cron задачи в обычном формате. Также в конфиг файле могут содержаться комментарии которые должны начинаться с символа <code>#</code>, они не будут добавлены в системный cron.</p>
+<h2 id="u041A_u043E_u043C_u0430_u043D_u0434_u0430_update"><a href="#u041A_u043E_u043C_u0430_u043D_u0434_u0430_update" class="headerlink" title="Команда update"></a>Команда update</h2><p>После того как конфиг создан, можно начинать использовать скрипт cron_manager.sh для добавления задач в cron.</p>
+<p>У скрипта cron_manager.sh есть одна важная особенность. Текущий каталог воспринимаеться как корневой каталог проекта. Поэтому <strong>обязательно необходимо перейти в корневой каталог проекта</strong>.</p>
+<p>Далее, из корневого каталога проекта, необходимо запустить команду update:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cron_manager update ./crontab</span><br></pre></td></tr></table></figure>
+<p>В выше приведенном примете <code>./crontab</code> и являеться конфигом со списком cron задач, который лежит в вашем проекте. Этот конфиг файл может находиться и в каком либо подкаталоге, необязательно в корне проекта.</p>
+<p>При выполнении команды <code>update</code> скрипт cron_manager.sh отобразит подробную инфо о том какие задачи были добавлены.</p>
+<p>Если в конфиге <code>./crontab</code> сделать какие либо изменеия и повторно запустить команду <code>update</code>, то сделанные изменения также применяться в системном cron’е.</p>
+<p>Так что все что нужно для управления cron задачами в проекте, это вносить их в конфиг файл и запускать команду <code>update</code> скрипта cron_manager.sh.</p>
+<h2 id="u041A_u043E_u043C_u0430_u043D_u0434_u0430_clear"><a href="#u041A_u043E_u043C_u0430_u043D_u0434_u0430_clear" class="headerlink" title="Команда clear"></a>Команда clear</h2><p>Данная команда позволяет очистить все cron задачи текущего проекта из системного cron’а. Это удобно например тогда, когда проект переносят в другое место на сервере, или вообще на другой сервер, и нужно из системного cron’а удалить все задачи которые относяться к проекту.</p>
+<p>Прежде всего <strong>переходим в корневую папку проекта</strong>. После этого запускаем команду <code>clear</code>, при этом конфиг cron задач проекта указывать уже не нужно:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cron_manager clear</span><br></pre></td></tr></table></figure>
+<p>При выполнении этой команды скрипт cron_manager.sh также выдаст подробную инфу о том какие именно задачи были удалены из системного cron’а. </p>
+      
+    </div>
+    <footer class="article-footer">
+      <!--<a data-url="http://atoumus.github.io/php-manage-cron-sh.html" data-id="cimblq9oi0002ngkn5l39fr85" class="article-share-link">Поделится</a>-->
+      <script type="text/javascript">(function() {
+        if (window.pluso)if (typeof window.pluso.start == "function") return;
+        if (window.ifpluso==undefined) { window.ifpluso = 1;
+            var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+            s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+            s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+            var h=d[g]('body')[0];
+            h.appendChild(s);
+        }})();</script>
+<div class="pluso" data-background="transparent" data-options="small,round,line,horizontal,counter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print"></div>
+
+      
+        <a href="http://atoumus.github.io/php-manage-cron-sh.html#disqus_thread" class="article-comment-link">Комментарии</a>
+      
+
+      
+    </footer>
+  </div>
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section></section>
+        
+          
+            <aside id="sidebar">
+  
+    <div class="widget-wrap">
+    <h3 class="widget-title">Категории</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Books/">Books</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Etc/">Etc</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/">Tools</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+  
+    <div class="widget-wrap">
+    <h3 class="widget-title">Последнее</h3>
+    <div class="widget recents">
+      <ul>
+        
+          <li>
+            <a href="/php-manage-cron-sh.html">PHP - Управление cron&#39;ом с помощью cron_manager.sh</a>
+          </li>
+        
+          <li>
+            <a href="/art-of-mind.html">Книги - Искусство думать (Эдвард де Боно)</a>
+          </li>
+        
+          <li>
+            <a href="/php-detect-country-by-ip.html">PHP - получаем гео-инфо пользователя по IP</a>
+          </li>
+        
+          <li>
+            <a href="/test-site-by-other-country-ip.html">Как проверить сайт под IP другой страны через прокси сервер</a>
+          </li>
+        
+          <li>
+            <a href="/2016-php-trends.html">Что учить PHP разработчику в 2016 году</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+    <div class="widget-wrap">
+    <h3 class="widget-title">Архив</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">апрель 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">март 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">февраль 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">январь 2016</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+  
+</aside>
+          
+        
+      </div>
+      <div id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 atoumus<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+
+    <div id="footer-counter">
+      <!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=34565485&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/34565485/3_0_ECFFECFF_CCFFCCFF_0_pageviews" style="width:88px; height:31px; border:0" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:34565485,lang:'ru'});return false}catch(e){}"></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter34565485 = new Ya.Metrika({
+                    id:34565485,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/34565485" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    </div>
+
+    <br style="clear: both">
+  </div>
+</div>
+    </div>
+    <nav id="mobile-nav">
+  
+</nav>
+    <script>
+  var disqus_shortname = 'atoumus';
+  
+  var disqus_url = 'http://atoumus.github.io/php-manage-cron-sh.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+  </div>
+</body>
