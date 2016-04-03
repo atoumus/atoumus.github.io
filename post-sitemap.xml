@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://atoumus.github.io/2016-php-trends.html</loc>
+        <lastmod>2016-04-03T04:17:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://atoumus.github.io/php-manage-cron-sh.html</loc>
         <lastmod>2016-04-02T04:45:11.152Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -33,14 +41,6 @@
     <url>
         <loc>http://atoumus.github.io/test-site-by-other-country-ip.html</loc>
         <lastmod>2016-03-16T12:18:26.969Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://atoumus.github.io/2016-php-trends.html</loc>
-        <lastmod>2016-03-16T11:52:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
