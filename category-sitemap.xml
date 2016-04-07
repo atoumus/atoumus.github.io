@@ -21,15 +21,15 @@
     </url>
 
     <url>
-        <loc>http://atoumus.github.io/categories/Books/</loc>
-        <lastmod>2016-03-17T05:15:50.935Z</lastmod>
+        <loc>http://atoumus.github.io/categories/PHP/</loc>
+        <lastmod>2016-04-03T04:17:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://atoumus.github.io/categories/PHP/</loc>
-        <lastmod>2016-04-03T04:17:00.000Z</lastmod>
+        <loc>http://atoumus.github.io/categories/Books/</loc>
+        <lastmod>2016-04-07T06:10:30.429Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
