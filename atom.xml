@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://atoumus.github.io/"/>
-  <updated>2016-04-07T06:10:30.429Z</updated>
+  <updated>2016-08-04T03:44:52.491Z</updated>
   <id>http://atoumus.github.io/</id>
   
   <author>
@@ -13,6 +13,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Vagrant / VirtualBox / Windows 10 - Ошибка Failed to create the host-only adapter]]></title>
+    <link href="http://atoumus.github.io/vagrant-vbox-win-10-failed-create-adapter.html"/>
+    <id>http://atoumus.github.io/vagrant-vbox-win-10-failed-create-adapter.html</id>
+    <published>2016-07-28T05:27:02.000Z</published>
+    <updated>2016-08-04T03:44:52.491Z</updated>
+    <content type="html"><![CDATA[<p>При использовании Vagrant как средства для развертывания виртуальной машины на Windows 10 начала возникать ошибка: <strong>Failed to create the host-only adapter</strong>. Далее о том как ее исправить.</p>
+<a id="more"></a>
+<p>Имеем: Windows 10 / Vagrant 1.8.5 / VirtualBox 5.1.2</p>
+<p>При выполнении команды <code>vagrant up</code> возникает ошибка примерно следующего вида:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Command: [&#34;hostonlyif&#34;, &#34;create&#34;]&#10;&#10;Stderr: 0%...&#10;Progress state: E_FAIL&#10;VBoxManage.exe: error: Failed to create the host-only adapter&#10;VBoxManage.exe: error: Code E_FAIL (0x80004005) - Unspecified error (extended info not available)&#10;VBoxManage.exe: error: Context: &#34;int __cdecl handleCreate(struct HandlerArg *,int,int *)&#34; at line 66 of file VBoxManageHostonly.cpp</span><br></pre></td></tr></table></figure>
+<p>Причем ранее, на Windows 8 этой ошибки небыло.</p>
+<p>Как оказалось, в VirtualBox уже позаботились об этом и выпустили специальный exe-фикс, который приводит VirtualBox в чувства:</p>
+<ol>
+<li>Необходимо перейти по этой ссылке: <a href="https://www.virtualbox.org/attachment/ticket/14040/VBox-Win10-fix-14040.exe" target="_blank" rel="external">https://www.virtualbox.org/attachment/ticket/14040/VBox-Win10-fix-14040.exe</a>.</li>
+<li>На открывшейся странице нажать на ссылку “downloading”.</li>
+<li>После скачивания exe файла, запустить его от имени администратора.</li>
+<li>Попробовать запустить команду <code>vagrant up</code>, должна отработать без ошибок.</li>
+<li>После этих действий можно удалить скачанный exe файл.</li>
+</ol>]]></content>
+    <summary type="html">
+    <![CDATA[<p>При использовании Vagrant как средства для развертывания виртуальной машины на Windows 10 начала возникать ошибка: <strong>Failed to create the host-only adapter</strong>. Далее о том как ее исправить.</p>]]>
+    
+    </summary>
+    
+      <category term="Tools" scheme="http://atoumus.github.io/categories/Tools/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Книги - Rework Бизнес без предрассудков (Джейсон Фрайд, Дэвид Хейнмейер Ханссон)]]></title>
@@ -452,9 +481,6 @@
 
 
 <p><img src="/2016-year-ochieriedi.png" alt="Что учить PHP разработчику в 2016 году"></p>
-
-
-<p><img src="/2016-year-php-shablonizatory.png" alt="Что учить PHP разработчику в 2016 году"></p>
 
 
 <p><img src="/2016-year-poiskovyie-dvizhki.png" alt="Что учить PHP разработчику в 2016 году"></p>

@@ -7,13 +7,6 @@
     </url>
 
     <url>
-        <loc>http://atoumus.github.io/categories/Tools/</loc>
-        <lastmod>2016-03-16T12:18:26.969Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://atoumus.github.io/categories/Etc/</loc>
         <lastmod>2016-03-16T12:18:55.429Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -30,6 +23,13 @@
     <url>
         <loc>http://atoumus.github.io/categories/PHP/</loc>
         <lastmod>2016-06-04T03:20:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://atoumus.github.io/categories/Tools/</loc>
+        <lastmod>2016-08-04T03:44:52.491Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

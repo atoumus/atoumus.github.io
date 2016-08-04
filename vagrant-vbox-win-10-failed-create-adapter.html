@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Категория: Books | Atoumus blog</title>
+  <title>Vagrant / VirtualBox / Windows 10 - Ошибка Failed to create the host-only adapter | Atoumus blog</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-  <meta name="description" content="Atoumus blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Atoumus blog">
-<meta property="og:url" content="http://atoumus.github.io/categories/Books/index.html">
+  <meta name="description" content="При использовании Vagrant как средства для развертывания виртуальной машины на Windows 10 начала возникать ошибка: Failed to create the host-only adapter. Далее о том как ее исправить.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vagrant / VirtualBox / Windows 10 - Ошибка Failed to create the host-only adapter">
+<meta property="og:url" content="http://atoumus.github.io/vagrant-vbox-win-10-failed-create-adapter.html">
 <meta property="og:site_name" content="Atoumus blog">
-<meta property="og:description" content="Atoumus blog">
+<meta property="og:description" content="При использовании Vagrant как средства для развертывания виртуальной машины на Windows 10 начала возникать ошибка: Failed to create the host-only adapter. Далее о том как ее исправить.">
+<meta property="og:updated_time" content="2016-08-04T03:44:52.491Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Atoumus blog">
-<meta name="twitter:description" content="Atoumus blog">
+<meta name="twitter:title" content="Vagrant / VirtualBox / Windows 10 - Ошибка Failed to create the host-only adapter">
+<meta name="twitter:description" content="При использовании Vagrant как средства для развертывания виртуальной машины на Windows 10 начала возникать ошибка: Failed to create the host-only adapter. Далее о том как ее исправить.">
 <meta name="twitter:creator" content="@atoumus">
 <link rel="publisher" href="https://plus.google.com/u/0/116624784918762784912">
   
@@ -72,42 +73,70 @@
   </div>
 </div>
       <div class="outer">
-        <section id="main"><section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/rework.html" class="archive-article-date">
-  <time datetime="2016-04-07T04:19:41.000Z" itemprop="datePublished">апр 7</time>
+        <section id="main"><article id="post-vagrant-vbox-win-10-failed-create-adapter" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/vagrant-vbox-win-10-failed-create-adapter.html" class="article-date">
+  <time datetime="2016-07-28T05:27:02.000Z" itemprop="datePublished">2016-07-28</time>
 </a>
-      <h1 itemprop="name">
-      <a class="archive-article-title" href="/rework.html">Книги - Rework Бизнес без предрассудков (Джейсон Фрайд, Дэвид Хейнмейер Ханссон)</a>
+    <div class="article-category">
+    <a class="article-category-link" href="/categories/Tools/">Tools</a>
+  </div>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      Vagrant / VirtualBox / Windows 10 - Ошибка Failed to create the host-only adapter
     </h1>
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>При использовании Vagrant как средства для развертывания виртуальной машины на Windows 10 начала возникать ошибка: <strong>Failed to create the host-only adapter</strong>. Далее о том как ее исправить.</p>
+<a id="more"></a>
+<p>Имеем: Windows 10 / Vagrant 1.8.5 / VirtualBox 5.1.2</p>
+<p>При выполнении команды <code>vagrant up</code> возникает ошибка примерно следующего вида:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Command: [&#34;hostonlyif&#34;, &#34;create&#34;]&#10;&#10;Stderr: 0%...&#10;Progress state: E_FAIL&#10;VBoxManage.exe: error: Failed to create the host-only adapter&#10;VBoxManage.exe: error: Code E_FAIL (0x80004005) - Unspecified error (extended info not available)&#10;VBoxManage.exe: error: Context: &#34;int __cdecl handleCreate(struct HandlerArg *,int,int *)&#34; at line 66 of file VBoxManageHostonly.cpp</span><br></pre></td></tr></table></figure>
+<p>Причем ранее, на Windows 8 этой ошибки небыло.</p>
+<p>Как оказалось, в VirtualBox уже позаботились об этом и выпустили специальный exe-фикс, который приводит VirtualBox в чувства:</p>
+<ol>
+<li>Необходимо перейти по этой ссылке: <a href="https://www.virtualbox.org/attachment/ticket/14040/VBox-Win10-fix-14040.exe" target="_blank" rel="external">https://www.virtualbox.org/attachment/ticket/14040/VBox-Win10-fix-14040.exe</a>.</li>
+<li>На открывшейся странице нажать на ссылку “downloading”.</li>
+<li>После скачивания exe файла, запустить его от имени администратора.</li>
+<li>Попробовать запустить команду <code>vagrant up</code>, должна отработать без ошибок.</li>
+<li>После этих действий можно удалить скачанный exe файл.</li>
+</ol>
+      
+    </div>
+    <footer class="article-footer">
+      <!--<a data-url="http://atoumus.github.io/vagrant-vbox-win-10-failed-create-adapter.html" data-id="cirfsgppk0001f0kna2dmdo79" class="article-share-link">Поделится</a>-->
+      <script type="text/javascript">(function() {
+        if (window.pluso)if (typeof window.pluso.start == "function") return;
+        if (window.ifpluso==undefined) { window.ifpluso = 1;
+            var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+            s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+            s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+            var h=d[g]('body')[0];
+            h.appendChild(s);
+        }})();</script>
+<div class="pluso" data-background="transparent" data-options="small,round,line,horizontal,counter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print"></div>
+
+      
+        <a href="http://atoumus.github.io/vagrant-vbox-win-10-failed-create-adapter.html#disqus_thread" class="article-comment-link">Комментарии</a>
+      
+
+      
+    </footer>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/art-of-mind.html" class="archive-article-date">
-  <time datetime="2016-03-16T12:49:41.000Z" itemprop="datePublished">март 16</time>
-</a>
-      <h1 itemprop="name">
-      <a class="archive-article-title" href="/art-of-mind.html">Книги - Искусство думать (Эдвард де Боно)</a>
-    </h1>
-    </header>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
-</article>
-  
-  
-    </div></section></section>
+</section></section>
         
           
             <aside id="sidebar">
@@ -212,11 +241,13 @@
     <script>
   var disqus_shortname = 'atoumus';
   
+  var disqus_url = 'http://atoumus.github.io/vagrant-vbox-win-10-failed-create-adapter.html';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
