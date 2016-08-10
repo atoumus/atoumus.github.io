@@ -3,42 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Atoumus blog</title>
+  <title>Yii2 - Установка basic и advanced шаблонов приложения через composer | Atoumus blog</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-  <meta name="description" content="&amp;lt;!DOCTYPE html&amp;gt;
-
-
-    
-    Redirecting...
-    
-
-
-Redirecting...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Atoumus blog">
-<meta property="og:url" content="http://atoumus.github.io/PHP/2016-php-trends.html">
+  <meta name="description" content="Yii2 предоставляет возможность начать разработку нового проекта с уже готового &quot;каркаса&quot;. На выбор предоставляеться два шаблона приложения: basic и advanced. Об их отличиях и установке пойдет речь в э">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Yii2 - Установка basic и advanced шаблонов приложения через composer">
+<meta property="og:url" content="http://atoumus.github.io/yii2-base-app.html">
 <meta property="og:site_name" content="Atoumus blog">
-<meta property="og:description" content="&amp;lt;!DOCTYPE html&amp;gt;
-
-
-    
-    Redirecting...
-    
-
-
-Redirecting...">
-<meta property="og:updated_time" content="2016-03-16T12:06:40.512Z">
+<meta property="og:description" content="Yii2 предоставляет возможность начать разработку нового проекта с уже готового &quot;каркаса&quot;. На выбор предоставляеться два шаблона приложения: basic и advanced. Об их отличиях и установке пойдет речь в э">
+<meta property="og:image" content="http://atoumus.github.io/yii2-base-app-cover.png">
+<meta property="og:updated_time" content="2016-08-10T04:07:16.204Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Atoumus blog">
-<meta name="twitter:description" content="&amp;lt;!DOCTYPE html&amp;gt;
-
-
-    
-    Redirecting...
-    
-
-
-Redirecting...">
+<meta name="twitter:title" content="Yii2 - Установка basic и advanced шаблонов приложения через composer">
+<meta name="twitter:description" content="Yii2 предоставляет возможность начать разработку нового проекта с уже готового &quot;каркаса&quot;. На выбор предоставляеться два шаблона приложения: basic и advanced. Об их отличиях и установке пойдет речь в э">
 <meta name="twitter:creator" content="@atoumus">
 <link rel="publisher" href="https://plus.google.com/u/0/116624784918762784912">
   
@@ -97,33 +74,52 @@ Redirecting...">
   </div>
 </div>
       <div class="outer">
-        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-yii2-base-app" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/PHP/2016-php-trends.html" class="article-date">
-  <time datetime="2016-03-16T12:06:40.513Z" itemprop="datePublished">2016-03-16</time>
+    <a href="/yii2-base-app.html" class="article-date">
+  <time datetime="2016-08-10T03:40:41.000Z" itemprop="datePublished">2016-08-10</time>
 </a>
-    
+    <div class="article-category">
+    <a class="article-category-link" href="/categories/Yii2/">Yii2</a>
+  </div>
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      Yii2 - Установка basic и advanced шаблонов приложения через composer
+    </h1>
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="1;URL=http://atoumus.github.io/2016-php-trends.html">
-</head>
-<body>
-Redirecting...
-</body>
-</html>
+        <p>
+<img src="/yii2-base-app-cover.png" alt="Yii2 - установка basic шаблона приложения через composer" align="left" style="margin: 0 20px 15px 0">
+Yii2 предоставляет возможность начать разработку нового проекта с уже готового "каркаса". На выбор предоставляеться два шаблона приложения: basic и advanced. Об их отличиях и установке пойдет речь в этой статье. 
+</p>
+
+<a id="more"></a>
+<p>Шаблон приложения basic это “упрощенная” заготовка для будущего сайта. Этот шаблон представлет собой уже структурированную кодовую базу, имеющую в себе для примера один котроллер, модель и пару форм. Это то, с чего можно начинать новый проект, либо просто изучение данного фреймворка.</p>
+<p>Также Yii2 предоставляет другой, более расширенный шаблон приложения под названием advanced. От basic он отличается более размашистой структурой, ориентированной на более серьезный проект.</p>
+<p>Какой именно выбирать, зависит от величины будущего проекта. Далее будет рассмотрена установка обеих шаблонов через composer.</p>
+<h2 id="u0423_u0441_u0442_u0430_u043D_u043E_u0432_u043A_u0430_basic__u0438_u043B_u0438_advanced__u0448_u0430_u0431_u043B_u043E_u043D_u0430__u043F_u0440_u0438_u043B_u043E_u0436_u0435_u043D_u0438_u044F"><a href="#u0423_u0441_u0442_u0430_u043D_u043E_u0432_u043A_u0430_basic__u0438_u043B_u0438_advanced__u0448_u0430_u0431_u043B_u043E_u043D_u0430__u043F_u0440_u0438_u043B_u043E_u0436_u0435_u043D_u0438_u044F" class="headerlink" title="Установка basic или advanced шаблона приложения"></a>Установка basic или advanced шаблона приложения</h2><ol>
+<li><p>Создаем папку нового проекта и переходим в нее (путь <code>/var/www/</code> у вас может быть другим):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir /var/www/yii2-new-app &amp;&amp; <span class="built_in">cd</span> <span class="variable">$_</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>С помощью composer создаем в новой папке basic или advanced проект фреймворка Yii2 (в данной команде имеется ввиду что composer установлен глобально):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ composer create-project yiisoft/yii2-app-basic ./</span><br><span class="line"><span class="comment"># или</span></span><br><span class="line">$ composer create-project yiisoft/yii2-app-advanced ./</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Запускаем встроенный веб-сервер PHP:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./yii serve</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Открываем в браузере адрес на который работает запущенный веб-сервер, по умолчанию это: <a href="http://localhost:8080/" target="_blank" rel="external">http://localhost:8080/</a><br>Должна открыться стартовая страница basic или advanced шаблона приложения фреймворка Yii2, в зависимости от того какой именно вы установили.</p>
+</li>
+</ol>
       
     </div>
     <footer class="article-footer">
-      <!--<a data-url="http://atoumus.github.io/PHP/2016-php-trends.html" data-id="cirfsgpue000of0knz6rwiro4" class="article-share-link">Поделится</a>-->
+      <!--<a data-url="http://atoumus.github.io/yii2-base-app.html" data-id="cirmxbqjr000038knypjgqd8n" class="article-share-link">Поделится</a>-->
       <script type="text/javascript">(function() {
         if (window.pluso)if (typeof window.pluso.start == "function") return;
         if (window.ifpluso==undefined) { window.ifpluso = 1;
@@ -136,7 +132,7 @@ Redirecting...
 <div class="pluso" data-background="transparent" data-options="small,round,line,horizontal,counter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print"></div>
 
       
-        <a href="http://atoumus.github.io/PHP/2016-php-trends.html#disqus_thread" class="article-comment-link">Комментарии</a>
+        <a href="http://atoumus.github.io/yii2-base-app.html#disqus_thread" class="article-comment-link">Комментарии</a>
       
 
       
@@ -254,7 +250,7 @@ Redirecting...
     <script>
   var disqus_shortname = 'atoumus';
   
-  var disqus_url = 'http://atoumus.github.io/PHP/2016-php-trends.html';
+  var disqus_url = 'http://atoumus.github.io/yii2-base-app.html';
   
   (function(){
     var dsq = document.createElement('script');

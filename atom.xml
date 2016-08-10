@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://atoumus.github.io/"/>
-  <updated>2016-08-05T03:38:47.975Z</updated>
+  <updated>2016-08-10T04:14:50.204Z</updated>
   <id>http://atoumus.github.io/</id>
   
   <author>
@@ -15,11 +15,96 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Yii2 - Отображение флеш (пользовательских) сообщений на сайте]]></title>
+    <link href="http://atoumus.github.io/yii2-flash-messages.html"/>
+    <id>http://atoumus.github.io/yii2-flash-messages.html</id>
+    <published>2016-08-10T03:45:41.000Z</published>
+    <updated>2016-08-10T04:14:50.204Z</updated>
+    <content type="html"><![CDATA[<p>
+<img src="/yii2-flash-messages-result.png" alt="Yii2 - отображение флеш сообщений на сайте" align="left" style="margin: 0 20px 15px 0">
+Как отображать простейшие пользовательские уведомления на сайте с использованием фреймворка Yii2.
+</p>
+
+<a id="more"></a>
+<h2 id="u041D_u0435_u043C_u043D_u043E_u0433_u043E__u0442_u0435_u043E_u0440_u0438_u0438"><a href="#u041D_u0435_u043C_u043D_u043E_u0433_u043E__u0442_u0435_u043E_u0440_u0438_u0438" class="headerlink" title="Немного теории"></a>Немного теории</h2><p>Флеш сообщения в данном случае - это уведомления отображаемые пользователю при каких либо событиях.</p>
+<p>В Yii2 уже встроен механизм для работы с флеш сообщениями. Работает он по такому принципу:</p>
+<ol>
+<li>С помощью метода <code>\Yii::$app-&gt;session-&gt;addFlash()</code> добавляем сообщение в сессию.</li>
+<li>Сообщение в сессии хранится до тех пор пока оно оттуда не будет извлечено методом <code>Yii::$app-&gt;session-&gt;getAllFlashes()</code>.</li>
+<li>Как только сообщение извлечено, оно удаляется из сессии.</li>
+</ol>
+<h2 id="u0420_u0435_u0430_u043B_u0438_u0437_u0430_u0446_u0438_u044F__u0444_u043B_u0435_u0448__u0441_u043E_u043E_u0431_u0449_u0435_u043D_u0438_u0439"><a href="#u0420_u0435_u0430_u043B_u0438_u0437_u0430_u0446_u0438_u044F__u0444_u043B_u0435_u0448__u0441_u043E_u043E_u0431_u0449_u0435_u043D_u0438_u0439" class="headerlink" title="Реализация флеш сообщений"></a>Реализация флеш сообщений</h2><p>Далее, в качестве кодовой базы будет использован basic шаблон приложения предоставляемый Yii2. Как установить basic шаблон приложения описано в <a href="/yii2-base-app.html" title="этой статье">этой статье</a>.</p>
+<p>Теперь реализуем флеш сообщения на практике. В данном примере рассматриваются простейшие пользовательские уведомления, без каких либо анимаций и пр. Эти уведомления будут просто отображаться в верхней части сайта перед выводом остального контента.</p>
+<ol>
+<li><p>Сначало создадим вспомогательный скрипт представления, в котором разместим код выводящий флеш сообщения. Для этого необходимо создать файл <code>\views\layouts\main\flashes.php</code> со следующим содержанием:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php foreach(Yii::$app-&gt;session-&gt;getAllFlashes() as $type =&gt; $messages): ?&gt;</span><br><span class="line">    &lt;?php foreach($messages as $message): ?&gt;</span><br><span class="line">        &lt;div class="alert alert-&lt;?= $type ?&gt;" role="alert"&gt;&lt;?= $message ?&gt;&lt;/div&gt;</span><br><span class="line">    &lt;?php endforeach ?&gt;</span><br><span class="line">&lt;?php endforeach ?&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Далее необходимо подключить только что созданное представление <code>flashes.php</code> в шаблон <code>\views\layouts\main.php</code>:<br><img src="/yii2-flash-messages-1.png" alt="Yii2 - отображение флеш сообщений на сайте"></p>
+</li>
+<li><p>Теперь можно проверить как работают флеш сообщения, для этого в контроллере <code>\controllers\SiteController.php</code> добавляем следующие строки кода:<br><img src="/yii2-flash-messages-2.png" alt="Yii2 - отображение флеш сообщений на сайте"></p>
+</li>
+<li><p>Обновляем страницу в браузере и видим результат:<br><img src="/yii2-flash-messages-result.png" alt="Yii2 - отображение флеш сообщений на сайте"></p>
+</li>
+</ol>
+<h2 id="u0417_u0430_u043A_u043B_u044E_u0447_u0435_u043D_u0438_u0435"><a href="#u0417_u0430_u043A_u043B_u044E_u0447_u0435_u043D_u0438_u0435" class="headerlink" title="Заключение"></a>Заключение</h2><p>Вообще это немного не полная реализация флеш сообщений. Потому что сейчас они отображаются при каждом обновлении главной страницы. В реальных приложениях флеш сообщения отображаются только после каких либо действий, и далее пропадают. Наример, пользователю можно отобразить сообщение после регистрации о том, что ему необходимо подтвердить свой e-mail дрес, это сообщение достаточно отобразить один раз после чего оно должно исчезнуть. </p>]]></content>
+    <summary type="html">
+    <![CDATA[<p>
+<img src="/yii2-flash-messages-result.png" alt="Yii2 - отображение флеш сообщений на сайте" align="left" style="margin: 0 20px 15px 0">
+Как отображать простейшие пользовательские уведомления на сайте с использованием фреймворка Yii2.
+</p>]]>
+    
+    </summary>
+    
+      <category term="Yii2" scheme="http://atoumus.github.io/categories/Yii2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Yii2 - Установка basic и advanced шаблонов приложения через composer]]></title>
+    <link href="http://atoumus.github.io/yii2-base-app.html"/>
+    <id>http://atoumus.github.io/yii2-base-app.html</id>
+    <published>2016-08-10T03:40:41.000Z</published>
+    <updated>2016-08-10T04:07:16.204Z</updated>
+    <content type="html"><![CDATA[<p>
+<img src="/yii2-base-app-cover.png" alt="Yii2 - установка basic шаблона приложения через composer" align="left" style="margin: 0 20px 15px 0">
+Yii2 предоставляет возможность начать разработку нового проекта с уже готового "каркаса". На выбор предоставляеться два шаблона приложения: basic и advanced. Об их отличиях и установке пойдет речь в этой статье. 
+</p>
+
+<a id="more"></a>
+<p>Шаблон приложения basic это “упрощенная” заготовка для будущего сайта. Этот шаблон представлет собой уже структурированную кодовую базу, имеющую в себе для примера один котроллер, модель и пару форм. Это то, с чего можно начинать новый проект, либо просто изучение данного фреймворка.</p>
+<p>Также Yii2 предоставляет другой, более расширенный шаблон приложения под названием advanced. От basic он отличается более размашистой структурой, ориентированной на более серьезный проект.</p>
+<p>Какой именно выбирать, зависит от величины будущего проекта. Далее будет рассмотрена установка обеих шаблонов через composer.</p>
+<h2 id="u0423_u0441_u0442_u0430_u043D_u043E_u0432_u043A_u0430_basic__u0438_u043B_u0438_advanced__u0448_u0430_u0431_u043B_u043E_u043D_u0430__u043F_u0440_u0438_u043B_u043E_u0436_u0435_u043D_u0438_u044F"><a href="#u0423_u0441_u0442_u0430_u043D_u043E_u0432_u043A_u0430_basic__u0438_u043B_u0438_advanced__u0448_u0430_u0431_u043B_u043E_u043D_u0430__u043F_u0440_u0438_u043B_u043E_u0436_u0435_u043D_u0438_u044F" class="headerlink" title="Установка basic или advanced шаблона приложения"></a>Установка basic или advanced шаблона приложения</h2><ol>
+<li><p>Создаем папку нового проекта и переходим в нее (путь <code>/var/www/</code> у вас может быть другим):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir /var/www/yii2-new-app &amp;&amp; <span class="built_in">cd</span> <span class="variable">$_</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>С помощью composer создаем в новой папке basic или advanced проект фреймворка Yii2 (в данной команде имеется ввиду что composer установлен глобально):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ composer create-project yiisoft/yii2-app-basic ./</span><br><span class="line"><span class="comment"># или</span></span><br><span class="line">$ composer create-project yiisoft/yii2-app-advanced ./</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Запускаем встроенный веб-сервер PHP:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./yii serve</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Открываем в браузере адрес на который работает запущенный веб-сервер, по умолчанию это: <a href="http://localhost:8080/" target="_blank" rel="external">http://localhost:8080/</a><br>Должна открыться стартовая страница basic или advanced шаблона приложения фреймворка Yii2, в зависимости от того какой именно вы установили.</p>
+</li>
+</ol>]]></content>
+    <summary type="html">
+    <![CDATA[<p>
+<img src="/yii2-base-app-cover.png" alt="Yii2 - установка basic шаблона приложения через composer" align="left" style="margin: 0 20px 15px 0">
+Yii2 предоставляет возможность начать разработку нового проекта с уже готового "каркаса". На выбор предоставляеться два шаблона приложения: basic и advanced. Об их отличиях и установке пойдет речь в этой статье. 
+</p>]]>
+    
+    </summary>
+    
+      <category term="Yii2" scheme="http://atoumus.github.io/categories/Yii2/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Книги - Разработка веб-приложений в Yii 2 (Марк Сафронов)]]></title>
     <link href="http://atoumus.github.io/book-web-dev-yii2.html"/>
     <id>http://atoumus.github.io/book-web-dev-yii2.html</id>
-    <published>2016-08-04T04:37:41.000Z</published>
-    <updated>2016-08-05T03:38:47.975Z</updated>
+    <published>2016-08-05T04:37:41.000Z</published>
+    <updated>2016-08-05T04:06:58.738Z</updated>
     <content type="html"><![CDATA[<p>
 <img src="/web-dev-yii2-book-cover.jpg" alt="Книги - Разработка веб-приложений в Yii 2 (Марк Сафронов)" align="left" style="margin: 0 20px 15px 0">
 Книга о популярном фреймворке Yii версии 2. Автор рассматривает различные аспекты данного фреймворка, а также то как они работают изнутри.

@@ -29,7 +29,14 @@
 
     <url>
         <loc>http://atoumus.github.io/categories/Books/</loc>
-        <lastmod>2016-08-05T03:38:47.975Z</lastmod>
+        <lastmod>2016-08-05T04:06:58.738Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://atoumus.github.io/categories/Yii2/</loc>
+        <lastmod>2016-08-10T04:14:50.204Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
