@@ -15,7 +15,7 @@
 <meta property="og:image" content="http://atoumus.github.io/yii2-flash-messages-1.png">
 <meta property="og:image" content="http://atoumus.github.io/yii2-flash-messages-2.png">
 <meta property="og:image" content="http://atoumus.github.io/yii2-flash-messages-result.png">
-<meta property="og:updated_time" content="2016-08-10T04:14:50.204Z">
+<meta property="og:updated_time" content="2016-08-12T05:58:18.794Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Yii2 - Отображение флеш (пользовательских) сообщений на сайте">
 <meta name="twitter:description" content="Как отображать простейшие пользовательские уведомления на сайте с использованием фреймворка Yii2.">
@@ -110,7 +110,7 @@
 <li>Сообщение в сессии хранится до тех пор пока оно оттуда не будет извлечено методом <code>Yii::$app-&gt;session-&gt;getAllFlashes()</code>.</li>
 <li>Как только сообщение извлечено, оно удаляется из сессии.</li>
 </ol>
-<h2 id="u0420_u0435_u0430_u043B_u0438_u0437_u0430_u0446_u0438_u044F__u0444_u043B_u0435_u0448__u0441_u043E_u043E_u0431_u0449_u0435_u043D_u0438_u0439"><a href="#u0420_u0435_u0430_u043B_u0438_u0437_u0430_u0446_u0438_u044F__u0444_u043B_u0435_u0448__u0441_u043E_u043E_u0431_u0449_u0435_u043D_u0438_u0439" class="headerlink" title="Реализация флеш сообщений"></a>Реализация флеш сообщений</h2><p>Далее, в качестве кодовой базы будет использован basic шаблон приложения предоставляемый Yii2. Как установить basic шаблон приложения описано в .</p>
+<h2 id="u0420_u0435_u0430_u043B_u0438_u0437_u0430_u0446_u0438_u044F__u0444_u043B_u0435_u0448__u0441_u043E_u043E_u0431_u0449_u0435_u043D_u0438_u0439"><a href="#u0420_u0435_u0430_u043B_u0438_u0437_u0430_u0446_u0438_u044F__u0444_u043B_u0435_u0448__u0441_u043E_u043E_u0431_u0449_u0435_u043D_u0438_u0439" class="headerlink" title="Реализация флеш сообщений"></a>Реализация флеш сообщений</h2><p>Далее, в качестве кодовой базы будет использован basic шаблон приложения предоставляемый Yii2. Как установить basic шаблон приложения описано в <a href="/yii2-basic-advanced.html" title="этой статье">этой статье</a>.</p>
 <p>Теперь реализуем флеш сообщения на практике. В данном примере рассматриваются простейшие пользовательские уведомления, без каких либо анимаций и пр. Эти уведомления будут просто отображаться в верхней части сайта перед выводом остального контента.</p>
 <ol>
 <li><p>Сначало создадим вспомогательный скрипт представления, в котором разместим код выводящий флеш сообщения. Для этого необходимо создать файл <code>\views\layouts\main\flashes.php</code> со следующим содержанием:</p>
@@ -127,7 +127,7 @@
       
     </div>
     <footer class="article-footer">
-      <!--<a data-url="http://atoumus.github.io/yii2-flash-messages.html" data-id="ciroe9orq0001akknq9ty8z2j" class="article-share-link">Поделится</a>-->
+      <!--<a data-url="http://atoumus.github.io/yii2-flash-messages.html" data-id="cirsp14pv000424knsyx562dq" class="article-share-link">Поделится</a>-->
       <script type="text/javascript">(function() {
         if (window.pluso)if (typeof window.pluso.start == "function") return;
         if (window.ifpluso==undefined) { window.ifpluso = 1;
@@ -161,7 +161,7 @@
     <div class="widget-wrap">
     <h3 class="widget-title">Категории</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Books/">Books</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Etc/">Etc</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/">Tools</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Yii2/">Yii2</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Books/">Books</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Etc/">Etc</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/">Tools</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Yii2/">Yii2</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
   
@@ -169,6 +169,10 @@
     <h3 class="widget-title">Последнее</h3>
     <div class="widget recents">
       <ul>
+        
+          <li>
+            <a href="/yii2-i18n.html">Yii2 - Интернационализация проекта</a>
+          </li>
         
           <li>
             <a href="/yii2-flash-messages.html">Yii2 - Отображение флеш (пользовательских) сообщений на сайте</a>
@@ -186,10 +190,6 @@
             <a href="/vagrant-vbox-win-10-failed-create-adapter.html">Vagrant / VirtualBox / Windows 10 - Ошибка Failed to create the host-only adapter</a>
           </li>
         
-          <li>
-            <a href="/rework.html">Книги - Rework Бизнес без предрассудков (Джейсон Фрайд, Дэвид Хейнмейер Ханссон)</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -197,7 +197,7 @@
     <div class="widget-wrap">
     <h3 class="widget-title">Архив</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">август 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">апрель 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">март 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">февраль 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">январь 2016</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">август 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">апрель 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">март 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">февраль 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">январь 2016</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
   

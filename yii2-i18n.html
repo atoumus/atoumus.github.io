@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Yii2 - Интернационализация проекта | Atoumus blog</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <meta name="description" content="Пример интернационализации сайта на Yii2 на двух языках: ru и en.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Yii2 - Интернационализация проекта">
+<meta property="og:url" content="http://atoumus.github.io/yii2-i18n.html">
+<meta property="og:site_name" content="Atoumus blog">
+<meta property="og:description" content="Пример интернационализации сайта на Yii2 на двух языках: ru и en.">
+<meta property="og:image" content="http://atoumus.github.io/yii2-i18n-cover.png">
+<meta property="og:image" content="http://atoumus.github.io/yii2-i18n-1.png">
+<meta property="og:updated_time" content="2016-08-13T04:36:58.834Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Yii2 - Интернационализация проекта">
+<meta name="twitter:description" content="Пример интернационализации сайта на Yii2 на двух языках: ru и en.">
+<meta name="twitter:creator" content="@atoumus">
+<link rel="publisher" href="https://plus.google.com/u/0/116624784918762784912">
+  
+    <link rel="alternative" href="/atom.xml" title="Atoumus blog" type="application/atom+xml">
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  <link href="//fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans:700,400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <div id="header-title">
+        <h1 id="logo-wrap">
+          <a href="/" id="logo">Atoumus blog
+          
+          </a>
+        </h1>
+      </div>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        
+          <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/atoumus" target="_blank" title="Twitter"></a>
+        
+        
+          <a id="nav-gplus-link" class="nav-icon" href="https://plus.google.com/u/0/116624784918762784912" target="_blank" title="Google plus"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Поиск"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Поиск"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://atoumus.github.io"></form>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="outer">
+        <section id="main"><article id="post-yii2-i18n" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/yii2-i18n.html" class="article-date">
+  <time datetime="2016-08-12T03:50:41.000Z" itemprop="datePublished">2016-08-12</time>
+</a>
+    <div class="article-category">
+    <a class="article-category-link" href="/categories/Yii2/">Yii2</a>
+  </div>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      Yii2 - Интернационализация проекта
+    </h1>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>
+<img src="/yii2-i18n-cover.png" alt="Yii2 - Интернационализация проекта" align="left" style="margin: 0 20px 15px 0">
+Пример интернационализации сайта на Yii2 на двух языках: ru и en.
+</p>
+
+<a id="more"></a>
+<p>В Yii2 уже встроен конпонент отвечающий за интернационализацию, называется он <code>i18n</code>. Для того что бы можно было начать им пользоваться, достаточно добавить его в конфигурацию приложения в раздел <code>components</code>. Также, для полноценной работы этого компонента, требуется PHP расширение <a href="http://www.php.net/manual/en/intro.intl.php" target="_blank" rel="external">intl</a>.</p>
+<p>В данной статье будет рассмотрен пример интернационализации сайта на Yii2 на двух языках: ru и en.</p>
+<p>Существуют два варианта записей идентификаторов языков:</p>
+<ul>
+<li>сокращенные, например ru, en;</li>
+<li>полные, например: ru-RU, en-US.</li>
+</ul>
+<p>Мы будем использовать сокращенный вариант (ru и en), т.к. его вполне достаточно для требуемой функциональности и он более лаконично воспринимается визуально.</p>
+<p>В качестве кодовой базы можно использовать как уже готовый сайт на Yii2, так и basic шаблон предоставляемый фреймворком. Как установить basic шаблон можно прочитать в <a href="/yii2-basic-advanced.html" title="этой статье">этой статье</a>.</p>
+<h2 id="u0417_u0430_u0434_u0430_u0447_u0430"><a href="#u0417_u0430_u0434_u0430_u0447_u0430" class="headerlink" title="Задача"></a>Задача</h2><p>Сформулируем требования, чего необходимо добится:</p>
+<ul>
+<li>переключение сайта между двумя языками: ru и en;</li>
+<li>отображение языка в адресной строке в виде <code>http://site.com/en/</code>;</li>
+<li>автоматическое перенаправление пользователя на наиболее подходящий для него язык, если он перешел на сайт без указания языка;</li>
+<li>хранение переводов должно осуществлятся в PHP файлах в виде массивов;</li>
+<li>переводы статических страниц должны содержаться в отдельных представлениях для разных языков.</li>
+</ul>
+<h2 id="u041A_u043E_u043D_u0444_u0438_u0433_u0443_u0440_u0430_u0446_u0438_u044F"><a href="#u041A_u043E_u043D_u0444_u0438_u0433_u0443_u0440_u0430_u0446_u0438_u044F" class="headerlink" title="Конфигурация"></a>Конфигурация</h2><p>Начинаем реализацию с прописывания требуемых для этого конфигураций в файл <code>\config\web.php</code>:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">'sourceLanguage'</span> =&gt; <span class="string">'en'</span>,</span><br><span class="line">    <span class="string">'language'</span> =&gt; <span class="string">'en'</span>,</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">'components'</span> =&gt; [</span><br><span class="line">        ...</span><br><span class="line">        <span class="string">'urlManager'</span> =&gt; [</span><br><span class="line">            <span class="string">'enablePrettyUrl'</span> =&gt; <span class="keyword">true</span>,</span><br><span class="line">            <span class="string">'showScriptName'</span> =&gt; <span class="keyword">false</span>,</span><br><span class="line">            <span class="string">'rules'</span> =&gt; [</span><br><span class="line">            ],</span><br><span class="line">        ],</span><br><span class="line">        ...</span><br><span class="line">        <span class="string">'i18n'</span> =&gt; [</span><br><span class="line">            <span class="string">'translations'</span> =&gt; [</span><br><span class="line">                <span class="string">'common*'</span> =&gt; [</span><br><span class="line">                    <span class="string">'class'</span> =&gt; <span class="string">'yii\i18n\PhpMessageSource'</span>,</span><br><span class="line">                    <span class="string">'basePath'</span> =&gt; <span class="string">'@app/messages'</span>,</span><br><span class="line">                ],</span><br><span class="line">            ],</span><br><span class="line">        ],</span><br><span class="line">        ...</span><br><span class="line">    ]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>В этой конфигурации:</p>
+<p><code>sourceLanguage</code> - исходный язык сообщений, т.е. тот который будет использован в виде ключей переводов, в данном случае <code>en</code>.</p>
+<p><code>language</code> - язык по умолчанию, на который будет перенаправлен пользователь в случае невозможности определения для него наиболее подходящего языка на основе данных предоставляемых его браузером.</p>
+<p><code>components -&gt; urlManager</code> - в данной секции включаем ЧПУ, для более наглядного отображения URL’ов.</p>
+<p><code>components -&gt; i18n</code> - эта секция предназначена для конфигурирования конмпонента интеранционализации. Ключ массива <code>common*</code> - означает категорию к которой будут относиться переводы из соответствующего файла <code>common.php</code>. Название категории можно указать и любое другое, или например сделать несколько категорий, но для примера обойдемся одной. В секции <code>&#39;class&#39; =&gt; &#39;yii\i18n\PhpMessageSource&#39;</code> необходимо указать как именно мы будем хранить сообщения, в данном случае указано что в виде PHP файлов (в виде ассоциативных массивов). Кроме <code>yii\i18n\PhpMessageSource</code> существуют и другие варианты, например сообщения можно хранить в БД. В секции <code>&#39;basePath&#39; =&gt; &#39;@app/messages&#39;</code> указан путь по которому будут распологаться PHP файлы с переводами.</p>
+<h2 id="u0424_u0430_u0439_u043B__u0441_u043E__u0441_u043F_u0438_u0441_u043A_u043E_u043C__u043F_u0435_u0440_u0435_u0432_u043E_u0434_u043E_u0432"><a href="#u0424_u0430_u0439_u043B__u0441_u043E__u0441_u043F_u0438_u0441_u043A_u043E_u043C__u043F_u0435_u0440_u0435_u0432_u043E_u0434_u043E_u0432" class="headerlink" title="Файл со списком переводов"></a>Файл со списком переводов</h2><p>Теперь необходимо создать PHP файл, который будет содержать в себе ассоциативный массив с переводами.</p>
+<p>При конфигурировании компонента <code>i18n</code> мы указали:<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="string">'translations'</span> =&gt; [</span><br><span class="line">    <span class="string">'common*'</span> =&gt; [</span><br><span class="line">        <span class="string">'class'</span> =&gt; <span class="string">'yii\i18n\PhpMessageSource'</span>,</span><br><span class="line">        <span class="string">'basePath'</span> =&gt; <span class="string">'@app/messages'</span>,</span><br><span class="line">    ],</span><br><span class="line">],</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<p>Это означает что файл с переводами должен иметь такое же имя, как и имя категории, т.е. <code>common.php</code>. Храниться он должен по такому пути <code>\messages\ru\common.php</code>.</p>
+<p>Для нашего примера с двумя языками  (ru и en), достаточно создать один файл с переводами только для русского языка, т.к. переводы английского языка будут в виде ключей для всех остальных переводов. Т.е. везде по сайту будут английские сообщения, при переключении на русский язык, фреймворк будет их подменять на русские.</p>
+<p>Например если бы мы хотели добавить какой либо дополнительный язык, например <code>de</code>, то кроме файла <code>\messages\ru\common.php</code> нам нужно было бы еще создать аналогичный для немецкого языка <code>\messages\de\common.php</code>. Но в нашем примере будет только один файл <code>\messages\ru\common.php</code>, создадим его, пока с пустым массивом:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> [];</span><br></pre></td></tr></table></figure>
+<h2 id="u0412_u043D_u043E_u0441_u0438_u043C__u043F_u0435_u0440_u0435_u0432_u043E_u0434_u044B"><a href="#u0412_u043D_u043E_u0441_u0438_u043C__u043F_u0435_u0440_u0435_u0432_u043E_u0434_u044B" class="headerlink" title="Вносим переводы"></a>Вносим переводы</h2><p>Теперь необходимо внести переводы по коду сайта и также добавить их в файл <code>\messages\ru\common.php</code>.</p>
+<p>Для вывода переводов в Yii2 существует специальный метод <code>Yii::t()</code>. Пример использования:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?</span>= Yii::t(<span class="string">'common'</span>, <span class="string">'Example text...'</span>) <span class="preprocessor">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>В первом аргументе указываем категорию, у нас она одна - <code>common</code>. Во втором аргументе пишем английский текст в том виде как он должен отображаться на сайте.</p>
+<p>После этого необходимо добавить русский перевод в файл <code>\messages\ru\common.php</code>:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> [</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">'Example text...'</span> =&gt; <span class="string">'Пример текста...'</span>,</span><br><span class="line">    ...</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<p>В качестве ключа используем английский перевод, а в качестве значения русский.</p>
+<p>Необходимо проделать такие действия по всему коду, т.е. все отображаемые тексты позаменять на английские, причем выводить их надо с помощью <code>Yii::t()</code>. И также добавить для всех английских текстов переводы в файл <code>\messages\ru\common.php</code>.</p>
+<h2 id="u041F_u0435_u0440_u0435_u043A_u043B_u044E_u0447_u0435_u043D_u0438_u0435__u044F_u0437_u044B_u043A_u043E_u0432"><a href="#u041F_u0435_u0440_u0435_u043A_u043B_u044E_u0447_u0435_u043D_u0438_u0435__u044F_u0437_u044B_u043A_u043E_u0432" class="headerlink" title="Переключение языков"></a>Переключение языков</h2><p>У пользователя должна быть возможность как то переключаться между языками. Для этого необходимо отображать ссылки для переходя на русский или английский язык. Для этой цели создадим специальный скрипт представления <code>\views\layouts\main\select-language.php</code>:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">yii</span>\<span class="title">bootstrap</span>\<span class="title">Html</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(\Yii::<span class="variable">$app</span>-&gt;language == <span class="string">'ru'</span>):</span><br><span class="line">    <span class="keyword">echo</span> Html::a(<span class="string">'Go to English'</span>, array_merge(</span><br><span class="line">        \Yii::<span class="variable">$app</span>-&gt;request-&gt;get(),</span><br><span class="line">        [\Yii::<span class="variable">$app</span>-&gt;controller-&gt;route, <span class="string">'language'</span> =&gt; <span class="string">'en'</span>]</span><br><span class="line">    ));</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">echo</span> Html::a(<span class="string">'Перейти на русский'</span>, array_merge(</span><br><span class="line">        \Yii::<span class="variable">$app</span>-&gt;request-&gt;get(),</span><br><span class="line">        [\Yii::<span class="variable">$app</span>-&gt;controller-&gt;route, <span class="string">'language'</span> =&gt; <span class="string">'ru'</span>]</span><br><span class="line">    ));</span><br><span class="line"><span class="keyword">endif</span>;</span><br></pre></td></tr></table></figure>
+<p>Далее необходимо подключить этот скрипт в главном шаблоне представления <code>\views\layouts\main.php</code>, для этого следущую строку:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p class="pull-left"&gt;&amp;copy; My Company &lt;?= date('Y') ?&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>нужно наменить на:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p class="pull-left"&gt;&amp;copy; My Company &lt;?= date('Y') ?&gt; | &lt;?= $this-&gt;render('main/select-language') ?&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>В этой строке мы добавили рендеринг скрипта представления для переключения языков, благодаря ему в футере будет отображаться ссылка для перехода на другой язык. Выглядеть это будет примерно так:</p>
+<p><img src="/yii2-i18n-1.png" alt="Yii2 - Интернационализация проекта"></p>
+<h2 id="u0418_u0441_u043F_u043E_u043B_u044C_u0437_u043E_u0432_u0430_u043D_u0438_u0435__u0441_u0442_u043E_u0440_u043E_u043D_u043D_u0435_u0433_u043E_UrlManager"><a href="#u0418_u0441_u043F_u043E_u043B_u044C_u0437_u043E_u0432_u0430_u043D_u0438_u0435__u0441_u0442_u043E_u0440_u043E_u043D_u043D_u0435_u0433_u043E_UrlManager" class="headerlink" title="Использование стороннего UrlManager"></a>Использование стороннего UrlManager</h2><p>Теперь нам необходимо сделать так, что бы в строке адреса отображался текущий язык, например <code>http://site.com/en</code>. К сожалению Yii2 не предоставляет для этого каких либо встроенных возможностей, и даже сделать это какими то адекватными обходными путями не получиться, или по крайней мере сложно. Самым “правильным” выходом в этой ситуации будет переопределение станрадтного класса <code>yii\web\UrlManager</code> на свой собственный, в котором будут заменены некоторые методы. Эти замененные методы должны брать на себя реализацию отображения языка в строке адреса.</p>
+<p>Вообще замена стандартных классов фреймворка на сторонние, лично на мой взгляд это хард-код. Но судя по всему в рамках фреймворка Yii2 это к сожалению нормальная практика.</p>
+<p>Писать собственную реализацию класса <code>UrlManager</code> мы не будем, т.к. данный “велосипед” уже создан и его можно просто подключить через Composer, что мы и сделаем. Перехотим в консоле в корневую папку проекта, и выполняем команду (тут имеется ввиду что Composer установлен глобально):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ composer require codemix/yii2-localeurls</span><br></pre></td></tr></table></figure>
+<p>Пакет <code>codemix/yii2-localeurls</code> дает нам следующие возможности:</p>
+<ul>
+<li>отображение текущего языка в адресной строке;</li>
+<li>перенаправление пользователя на наиболее подходящий для него язык на основе данных отправляемых его браузером.</li>
+</ul>
+<p>Далее нам нужно переконфигурировать компнент <code>urlManager</code> так, что бы он использовал не стандартный класс фреймворка, а только что подключенный. Для этого в файле <code>\config\web.php</code>, в секцию <code>componets -&gt; urlManager</code> добавляем следующие три строки:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">'components'</span> =&gt; [</span><br><span class="line">        ...</span><br><span class="line">        <span class="string">'urlManager'</span> =&gt; [</span><br><span class="line">            ...</span><br><span class="line">            <span class="string">'class'</span> =&gt; <span class="string">'codemix\localeurls\UrlManager'</span>,</span><br><span class="line">            <span class="string">'languages'</span> =&gt; [<span class="string">'ru'</span>, <span class="string">'en'</span>],</span><br><span class="line">            <span class="string">'enableDefaultLanguageUrlCode'</span> =&gt; <span class="keyword">true</span>,</span><br><span class="line">            ...</span><br><span class="line">        ],</span><br><span class="line">        ...</span><br><span class="line">    ]</span><br><span class="line">    ...</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>Немного объяснений по данной конфигурации:</p>
+<p><code>&#39;class&#39; =&gt; &#39;codemix\localeurls\UrlManager&#39;</code> - указываем фреймворку что бы вместо стандартного класса <code>UrlManager</code> был использован тот который мы только что подключили через Composer.</p>
+<p><code>&#39;languages&#39; =&gt; [&#39;ru&#39;, &#39;en&#39;]</code> - на какие языки переведен проект.</p>
+<p><code>&#39;enableDefaultLanguageUrlCode&#39; =&gt; true</code> - этот флаг означает что мы ходим что бы текущий язык отображался в адресной строке всегда, даже если пользователь просто находиться на главной странице (т.е. адрес будет вида <code>http://site.com/en</code>). При желании этот флаг можно и не указывать, по умолчанию он будет иметь значение <code>false</code>, что означает что на главной странице язык в адресной строке отображаться не будет (т.е. адрес будет вида <code>http://site.com</code>). </p>
+<h2 id="u0418_u043D_u0442_u0435_u0440_u043D_u0430_u0446_u0438_u043E_u043D_u0430_u043B_u0438_u0437_u0430_u0446_u0438_u044F__u0441_u0442_u0430_u0442_u0438_u0447_u0435_u0441_u043A_u0438_u0445__u0441_u0442_u0440_u0430_u043D_u0438_u0446"><a href="#u0418_u043D_u0442_u0435_u0440_u043D_u0430_u0446_u0438_u043E_u043D_u0430_u043B_u0438_u0437_u0430_u0446_u0438_u044F__u0441_u0442_u0430_u0442_u0438_u0447_u0435_u0441_u043A_u0438_u0445__u0441_u0442_u0440_u0430_u043D_u0438_u0446" class="headerlink" title="Интернационализация статических страниц"></a>Интернационализация статических страниц</h2><p>В Yii2 есть встроенный класс <code>\yii\web\ViewAction</code>, который предназначен для реализации статических страниц.</p>
+<p>Но по умолчанию интернационализацию он не поддерживает.</p>
+<p>Суть в том, что статические страницы имеют большой текст, который не удобно вставлять в файлы переводов (т.е. в нашем случае в файл <code>\messages\ru\common.php</code>). Переводы для статических страниц лучше всего хранить в отдельных файлах - в разных скриптах преставлений которые будут соостветствовать разным языкам.</p>
+<p>Реализуем интернационализированные статические страницы, для этого в файле <code>\controllers\SiteController.php</code>, в методе <code>actions()</code> необходимо добавить следущую секцию:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">actions</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> [</span><br><span class="line">        ...</span><br><span class="line">        <span class="string">'page'</span> =&gt; [</span><br><span class="line">            <span class="string">'class'</span> =&gt; \yii\web\ViewAction::className(),</span><br><span class="line">            <span class="string">'viewPrefix'</span> =&gt; <span class="string">'pages/'</span> . \Yii::<span class="variable">$app</span>-&gt;language</span><br><span class="line">        ]</span><br><span class="line">        ...</span><br><span class="line">    ];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>В этой секции и находиться основной код который позволяет интернационализировать статические страницы, это <code>&#39;viewPrefix&#39; =&gt; &#39;pages/&#39; . \Yii::$app-&gt;language</code>. В параметре <code>viewPrefix</code> мы указываем по какому пути у нас будут находиться скриты представлений для статических страниц, но в нашем случае мы еще и подставляем в этот путь текущий язык <code>\Yii::$app-&gt;language</code>.</p>
+<p>Далее создадим два файла представления, которые будут соответствовать одной статической странице, но каждый будет для своего языка. Для английского <code>\views\site\pages\en\some.php</code> должен содержать текст: <code>EN static page...</code>. Для русского <code>\views\site\pages\ru\some.php</code> должен содержать текст <code>Русская статическая страница...</code>.</p>
+<p>Теперь настроим ЧПУ для наглядного отображения адресов статических страниц, для этого в конфиге <code>\config\web.php</code> в секцию <code>urlManager -&gt; rules</code> добавим правило:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'urlManager'</span> =&gt; [</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">'rules'</span> =&gt; [</span><br><span class="line">        <span class="string">'page/&lt;view:[a-zA-Z0-9-]+&gt;'</span> =&gt; <span class="string">'site/page'</span>,</span><br><span class="line">    ],</span><br><span class="line">    ...</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+<p>На этом, реализация статических страниц закончена, можно проверить, попробовать открыть два адреса в браузере:</p>
+<ul>
+<li><code>http://site.com/ru/page/some</code> - откроется русская статическая страница;</li>
+<li><code>http://site.com/en/page/some</code> - английская.</li>
+</ul>
+<h2 id="u0417_u0430_u043A_u043B_u044E_u0447_u0435_u043D_u0438_u0435"><a href="#u0417_u0430_u043A_u043B_u044E_u0447_u0435_u043D_u0438_u0435" class="headerlink" title="Заключение"></a>Заключение</h2><p>В целом реализация интернационализации в Yii2 не представляет ничего сложного, особено если использовать сторонний компонент <code>codemix/yii2-localeurls</code>.</p>
+<p>Задача, которая была описана в начале статьи полностью выполнена:</p>
+<ul>
+<li>переключение сайта между двумя языками происходит по ссылке которая расположена в футере;</li>
+<li>текущий язык отображается в адресной строке в виде <code>http://site.com/en/</code>;</li>
+<li>если пользователь перешел на сайт не указав язык (т.е. <code>http://site.com</code>), то он будет перенаправлен на наиболее подходящий язык (т.е. например на <code>http://site.com/en</code>);</li>
+<li>хранение переводов осуществляется в PHP файлах в виде ассоциативных массивов;</li>
+<li>переводы статических страниц хранятся в отдельных представлениях для разных языков.</li>
+</ul>
+      
+    </div>
+    <footer class="article-footer">
+      <!--<a data-url="http://atoumus.github.io/yii2-i18n.html" data-id="cirsp14oj000124knw934wiid" class="article-share-link">Поделится</a>-->
+      <script type="text/javascript">(function() {
+        if (window.pluso)if (typeof window.pluso.start == "function") return;
+        if (window.ifpluso==undefined) { window.ifpluso = 1;
+            var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+            s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+            s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+            var h=d[g]('body')[0];
+            h.appendChild(s);
+        }})();</script>
+<div class="pluso" data-background="transparent" data-options="small,round,line,horizontal,counter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print"></div>
+
+      
+        <a href="http://atoumus.github.io/yii2-i18n.html#disqus_thread" class="article-comment-link">Комментарии</a>
+      
+
+      
+    </footer>
+  </div>
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section></section>
+        
+          
+            <aside id="sidebar">
+  
+    <div class="widget-wrap">
+    <h3 class="widget-title">Категории</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Books/">Books</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Etc/">Etc</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/">Tools</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Yii2/">Yii2</a><span class="category-list-count">3</span></li></ul>
+    </div>
+  </div>
+  
+    <div class="widget-wrap">
+    <h3 class="widget-title">Последнее</h3>
+    <div class="widget recents">
+      <ul>
+        
+          <li>
+            <a href="/yii2-i18n.html">Yii2 - Интернационализация проекта</a>
+          </li>
+        
+          <li>
+            <a href="/yii2-flash-messages.html">Yii2 - Отображение флеш (пользовательских) сообщений на сайте</a>
+          </li>
+        
+          <li>
+            <a href="/yii2-basic-advanced.html">Yii2 - Установка basic и advanced шаблонов приложения через Composer</a>
+          </li>
+        
+          <li>
+            <a href="/book-web-dev-yii2.html">Книги - Разработка веб-приложений в Yii 2 (Марк Сафронов)</a>
+          </li>
+        
+          <li>
+            <a href="/vagrant-vbox-win-10-failed-create-adapter.html">Vagrant / VirtualBox / Windows 10 - Ошибка Failed to create the host-only adapter</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+    <div class="widget-wrap">
+    <h3 class="widget-title">Архив</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">август 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">апрель 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">март 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">февраль 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">январь 2016</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+  
+</aside>
+          
+        
+      </div>
+      <div id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 atoumus<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+
+    <div id="footer-counter">
+      <!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=34565485&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/34565485/3_0_ECFFECFF_CCFFCCFF_0_pageviews" style="width:88px; height:31px; border:0" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:34565485,lang:'ru'});return false}catch(e){}"></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter34565485 = new Ya.Metrika({
+                    id:34565485,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/34565485" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    </div>
+
+    <br style="clear: both">
+  </div>
+</div>
+    </div>
+    <nav id="mobile-nav">
+  
+</nav>
+    <script>
+  var disqus_shortname = 'atoumus';
+  
+  var disqus_url = 'http://atoumus.github.io/yii2-i18n.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+  </div>
+</body>
