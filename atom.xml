@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://atoumus.github.io/"/>
-  <updated>2016-08-13T05:14:43.761Z</updated>
+  <updated>2016-08-13T05:15:29.139Z</updated>
   <id>http://atoumus.github.io/</id>
   
   <author>
@@ -15,11 +15,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Yii2 - Интернационализация проекта]]></title>
+    <title><![CDATA[Yii2 - Интернационализация проекта (мультиязычность)]]></title>
     <link href="http://atoumus.github.io/yii2-i18n.html"/>
     <id>http://atoumus.github.io/yii2-i18n.html</id>
     <published>2016-08-12T03:50:41.000Z</published>
-    <updated>2016-08-13T05:14:43.761Z</updated>
+    <updated>2016-08-13T05:15:29.139Z</updated>
     <content type="html"><![CDATA[<p>
 <img src="/yii2-i18n-cover.png" alt="Yii2 - Интернационализация проекта" align="left" style="margin: 0 20px 15px 0">
 Пример интернационализации сайта на Yii2 на двух языках: ru и en.
