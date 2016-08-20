@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://atoumus.github.io/yii2-swiftmailer.html</loc>
+        <lastmod>2016-08-20T03:43:06.620Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://atoumus.github.io/yii2-basic-advanced.html</loc>
         <lastmod>2016-08-18T03:36:55.183Z</lastmod>
         <changefreq>weekly</changefreq>
