@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://atoumus.github.io/"/>
-  <updated>2016-08-20T03:43:06.620Z</updated>
+  <updated>2016-08-20T03:48:57.748Z</updated>
   <id>http://atoumus.github.io/</id>
   
   <author>
@@ -18,8 +18,8 @@
     <title><![CDATA[Yii2 - Отправка писем с помощью Swiftmailer]]></title>
     <link href="http://atoumus.github.io/yii2-swiftmailer.html"/>
     <id>http://atoumus.github.io/yii2-swiftmailer.html</id>
-    <published>2016-08-18T03:50:41.000Z</published>
-    <updated>2016-08-20T03:43:06.620Z</updated>
+    <published>2016-08-20T03:50:41.000Z</published>
+    <updated>2016-08-20T03:48:57.748Z</updated>
     <content type="html"><![CDATA[<p>В Yii2 уже встроен по умолчанию компонент отправки писем, в качестве которого используется Swiftmailer. Рассмотрим на примере тонкости работы с этим компонентом, такие как передача параметров в layout и пр.</p>
 <a id="more"></a>
 <h2 id="u0417_u0430_u0434_u0430_u0447_u0430"><a href="#u0417_u0430_u0434_u0430_u0447_u0430" class="headerlink" title="Задача"></a>Задача</h2><p>Необходимо настроить отправку писем, так что бы:</p>
