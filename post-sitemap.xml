@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://atoumus.github.io/2016-php-trends.html</loc>
+        <lastmod>2016-11-05T04:20:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://atoumus.github.io/yii2-swiftmailer.html</loc>
         <lastmod>2016-08-25T03:51:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -49,14 +57,6 @@
     <url>
         <loc>http://atoumus.github.io/vagrant-vbox-win-10-failed-create-adapter.html</loc>
         <lastmod>2016-08-04T04:38:30.365Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://atoumus.github.io/2016-php-trends.html</loc>
-        <lastmod>2016-06-04T03:20:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
