@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://atoumus.github.io/"/>
-  <updated>2016-08-25T03:51:41.000Z</updated>
+  <updated>2017-10-03T08:59:58.883Z</updated>
   <id>http://atoumus.github.io/</id>
   
   <author>
@@ -13,6 +13,96 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Что учить PHP разработчику в 2017 году]]></title>
+    <link href="http://atoumus.github.io/2017-php-trends.html"/>
+    <id>http://atoumus.github.io/2017-php-trends.html</id>
+    <published>2017-10-03T08:22:02.000Z</published>
+    <updated>2017-10-03T08:59:58.883Z</updated>
+    <content type="html"><![CDATA[<p>Что должен знать современный PHP разработчик?</p>
+<p>Минимум технологий, это: HTML, CSS, PHP, MySQL, JavaScript и jQuery.</p>
+<p>Но это самые основы, которых сейчас уже недостаточно для того что бы быть конкурентно способным. Web разработка, и конкретно PHP, развиваются большими шагами, и для того что бы оставатся на должном уровне, нужно постоянно изучать что то новое и совершенствовать свои знания и навыки.</p>
+<p>Но что именно сейчас наиболее популярно и востребованно среди работодателей?</p>
+<p>В этой статье собрана статистика с сайта <a href="http://hh.ru" target="_blank" rel="external">hh.ru</a> за 2017 год, и составлены графики, что сейчас из веб-технологий наиболее востребованно. Благодаря им значительно легче определится, на что сейчас нужно делать основной упор в самообразовании.</p>
+<a id="more"></a>
+
+<p><img src="/1-php-frameworks.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/2-php-cms.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/3-php-forumy.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/4-testirovanie.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/5-php-shablonizatory.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/6-db.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/7-ocheredi.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/8-poiskovye-dvizhki.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/9-frontend.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/10-vcs.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/11-web-servera.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/12-virtualizatsiia.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/13-logirovanie-i-monitoring.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/14-keshirovanie.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/15-profilirovanie-i-otladka.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/16-prochee.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/17-ci.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/18-issue-trackers.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/19-ide.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/20-dolzhnost.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/21-metodologii-razrabotki.png" alt="Что учить PHP разработчику в 2017 году"></p>
+
+
+<p><img src="/22-tekhniki-razrabotki.png" alt="Что учить PHP разработчику в 2017 году"></p>]]></content>
+    <summary type="html">
+    <![CDATA[<p>Что должен знать современный PHP разработчик?</p>
+<p>Минимум технологий, это: HTML, CSS, PHP, MySQL, JavaScript и jQuery.</p>
+<p>Но это самые основы, которых сейчас уже недостаточно для того что бы быть конкурентно способным. Web разработка, и конкретно PHP, развиваются большими шагами, и для того что бы оставатся на должном уровне, нужно постоянно изучать что то новое и совершенствовать свои знания и навыки.</p>
+<p>Но что именно сейчас наиболее популярно и востребованно среди работодателей?</p>
+<p>В этой статье собрана статистика с сайта <a href="http://hh.ru">hh.ru</a> за 2017 год, и составлены графики, что сейчас из веб-технологий наиболее востребованно. Благодаря им значительно легче определится, на что сейчас нужно делать основной упор в самообразовании.</p>]]>
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://atoumus.github.io/categories/PHP/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Yii2 - Отправка писем с помощью Swiftmailer]]></title>
@@ -101,7 +191,7 @@
     <link href="http://atoumus.github.io/yii2-i18n.html"/>
     <id>http://atoumus.github.io/yii2-i18n.html</id>
     <published>2016-08-12T03:50:41.000Z</published>
-    <updated>2016-08-18T03:34:56.564Z</updated>
+    <updated>2016-08-17T17:34:56.000Z</updated>
     <content type="html"><![CDATA[<p>Рассмотрим пример интернационализации сайта на Yii2 на двух языках: ru и en.</p>
 <a id="more"></a>
 <p>В Yii2 уже встроен конпонент отвечающий за интернационализацию, называется он <code>i18n</code>. Для того что бы можно было начать им пользоваться, достаточно добавить его в конфигурацию приложения в раздел <code>components</code>. Также, для полноценной работы этого компонента, требуется PHP расширение <a href="http://www.php.net/manual/en/intro.intl.php" target="_blank" rel="external">intl</a>.</p>
@@ -202,7 +292,7 @@
     <link href="http://atoumus.github.io/yii2-flash-messages.html"/>
     <id>http://atoumus.github.io/yii2-flash-messages.html</id>
     <published>2016-08-10T03:45:41.000Z</published>
-    <updated>2016-08-12T05:58:18.794Z</updated>
+    <updated>2016-08-11T19:58:18.000Z</updated>
     <content type="html"><![CDATA[<p>
 <img src="/yii2-flash-messages-result.png" alt="Yii2 - отображение флеш сообщений на сайте" align="left" style="margin: 0 20px 15px 0">
 Как отображать простейшие пользовательские уведомления на сайте с использованием фреймворка Yii2.
@@ -247,7 +337,7 @@
     <link href="http://atoumus.github.io/yii2-basic-advanced.html"/>
     <id>http://atoumus.github.io/yii2-basic-advanced.html</id>
     <published>2016-08-10T03:40:41.000Z</published>
-    <updated>2016-08-18T03:36:55.183Z</updated>
+    <updated>2016-08-17T17:36:54.000Z</updated>
     <content type="html"><![CDATA[<p>Yii2 предоставляет возможность начать разработку нового проекта с уже готового “каркаса”. На выбор предоставляется два шаблона приложения: basic и advanced. Об их отличиях и установке пойдет речь в этой статье. </p>
 <a id="more"></a>
 <p>Шаблон приложения basic это “упрощенная” заготовка для будущего сайта. Этот шаблон представлет собой уже структурированную кодовую базу, имеющую в себе для примера один котроллер, модель и пару форм. Это то, с чего можно начинать новый проект, либо просто изучение данного фреймворка.</p>
@@ -280,7 +370,7 @@
     <link href="http://atoumus.github.io/book-web-dev-yii2.html"/>
     <id>http://atoumus.github.io/book-web-dev-yii2.html</id>
     <published>2016-08-05T04:37:41.000Z</published>
-    <updated>2016-08-05T04:06:58.738Z</updated>
+    <updated>2016-08-04T18:06:58.000Z</updated>
     <content type="html"><![CDATA[<p>
 <img src="/web-dev-yii2-book-cover.jpg" alt="Книги - Разработка веб-приложений в Yii 2 (Марк Сафронов)" align="left" style="margin: 0 20px 15px 0">
 Книга о популярном фреймворке Yii версии 2. Автор рассматривает различные аспекты данного фреймворка, а также то как они работают изнутри.
@@ -325,7 +415,7 @@
     <link href="http://atoumus.github.io/vagrant-vbox-win-10-failed-create-adapter.html"/>
     <id>http://atoumus.github.io/vagrant-vbox-win-10-failed-create-adapter.html</id>
     <published>2016-08-04T03:27:02.000Z</published>
-    <updated>2016-08-04T04:38:30.365Z</updated>
+    <updated>2016-08-03T18:38:30.000Z</updated>
     <content type="html"><![CDATA[<p>При использовании Vagrant как средства для развертывания виртуальной машины на Windows 10 начала возникать ошибка: <strong>Failed to create the host-only adapter</strong>. Далее о том как ее исправить.</p>
 <a id="more"></a>
 <p>Имеем: Windows 10 / Vagrant 1.8.5 / VirtualBox 5.1.2</p>
@@ -354,7 +444,7 @@
     <link href="http://atoumus.github.io/rework.html"/>
     <id>http://atoumus.github.io/rework.html</id>
     <published>2016-04-07T04:19:41.000Z</published>
-    <updated>2016-04-07T06:10:30.429Z</updated>
+    <updated>2016-04-06T20:10:30.000Z</updated>
     <content type="html"><![CDATA[<p>
 <img src="/050416-rework-cover.jpg" alt="Книги - Rework: Бизнес без предрассудков (Джейсон Фрайд, Дэвид Хейнмейер Ханссон)" align="left" style="margin-right: 10px">
 Книга от создателей компании <a href="https://ru.wikipedia.org/wiki/37signals" target="_blank">37signals</a>. О том как правильно создавать и управлять компанией. Авторы предлагают отказаться от стандартных практик в этом деле и предлагают свои неординарные подходы.
@@ -450,7 +540,7 @@
     <link href="http://atoumus.github.io/php-manage-cron-sh.html"/>
     <id>http://atoumus.github.io/php-manage-cron-sh.html</id>
     <published>2016-04-02T03:47:02.000Z</published>
-    <updated>2016-04-02T04:45:11.152Z</updated>
+    <updated>2016-04-01T18:45:10.000Z</updated>
     <content type="html"><![CDATA[<p>В каждом PHP проекте есть скрипты которые нужно запускать по крону. Когда таких скриптов становиться много, то возникает необходимость их хранить в каком-то конфиге проекта. А если еще и нет root доступа к серверу, то каждый раз дергать админа что бы он поставил какой то скрипт на крон, совсем не удобно. В этой статье пойдет речь о том, как управлять cron задачами в проекте, не имея root прав, с помощью скрипта <a href="https://github.com/atoumus/cron_manager.sh" target="_blank" rel="external">cron_manager.sh</a>.</p>
 <a id="more"></a>
 <p>Скрипт <a href="https://github.com/atoumus/cron_manager.sh" target="_blank" rel="external">cron_manager.sh</a> представляет собой удобный инструмент, который может считывать конфиги cron задач лежащие в папке проекта, и на их осное добавлять/изменять/удалять cron задачи в ОС сервера. Для этого скрипта не требуются root права. Cron задачи сохраняются в cron файл, который принадлежит текущему linux пользователю.</p>
@@ -493,7 +583,7 @@
     <link href="http://atoumus.github.io/art-of-mind.html"/>
     <id>http://atoumus.github.io/art-of-mind.html</id>
     <published>2016-03-16T12:49:41.000Z</published>
-    <updated>2016-03-17T05:15:50.935Z</updated>
+    <updated>2016-03-16T19:15:50.000Z</updated>
     <content type="html"><![CDATA[<p>
 <img src="/2016-03-16-book-cover.jpg" alt="Книги - Искусство думать (Эдвард де Боно)" align="left" style="margin-right: 10px">
 Книга о том, как находить выход в казалось бы безвыходных ситуациях. О том как развить неординарное мышление. В этой статье дается обзор, оценка и некоторые цитаты из книги.
@@ -645,7 +735,7 @@
     <link href="http://atoumus.github.io/test-site-by-other-country-ip.html"/>
     <id>http://atoumus.github.io/test-site-by-other-country-ip.html</id>
     <published>2016-02-07T05:14:02.000Z</published>
-    <updated>2016-03-16T12:18:26.969Z</updated>
+    <updated>2016-03-16T02:18:26.000Z</updated>
     <content type="html"><![CDATA[<p>Иногда возникает необходимость зайти на свой сайт под IP другой страны. Например что бы проверить ту или иную функциональность, которая работает по разному в зависимости с IP какой страны зашел пользователь. В этой статье будут рассмотрены способы как это можно удобно сделать.</p>
 <a id="more"></a>
 <p>Это можно сделать тремя способами:</p>
@@ -826,7 +916,7 @@
     <link href="http://atoumus.github.io/init-post.html"/>
     <id>http://atoumus.github.io/init-post.html</id>
     <published>2016-01-07T06:31:41.000Z</published>
-    <updated>2016-03-16T12:18:55.429Z</updated>
+    <updated>2016-01-06T19:35:20.000Z</updated>
     <content type="html"><![CDATA[<p>Hello from <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a> :)</p>]]></content>
     <summary type="html">
     <![CDATA[<p>Hello from <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a> :)</p>]]>
