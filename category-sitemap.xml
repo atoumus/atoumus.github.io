@@ -8,35 +8,35 @@
 
     <url>
         <loc>http://atoumus.github.io/categories/Etc/</loc>
-        <lastmod>2016-01-06T19:35:20.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://atoumus.github.io/categories/Tools/</loc>
-        <lastmod>2016-08-03T18:38:30.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://atoumus.github.io/categories/Books/</loc>
-        <lastmod>2016-08-04T18:06:58.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://atoumus.github.io/categories/Yii2/</loc>
-        <lastmod>2016-08-25T03:51:41.000Z</lastmod>
+        <lastmod>2017-11-27T15:16:13.400Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://atoumus.github.io/categories/PHP/</loc>
-        <lastmod>2017-10-03T08:59:58.883Z</lastmod>
+        <lastmod>2017-11-27T15:16:13.408Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://atoumus.github.io/categories/Books/</loc>
+        <lastmod>2017-11-27T15:16:13.412Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://atoumus.github.io/categories/Tools/</loc>
+        <lastmod>2017-11-27T15:16:13.451Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://atoumus.github.io/categories/Yii2/</loc>
+        <lastmod>2017-11-27T15:16:13.467Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

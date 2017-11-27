@@ -7,8 +7,96 @@
     </url>
 
     <url>
+        <loc>http://atoumus.github.io/yii2-i18n.html</loc>
+        <lastmod>2017-11-27T15:16:13.467Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://atoumus.github.io/yii2-flash-messages.html</loc>
+        <lastmod>2017-11-27T15:16:13.456Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://atoumus.github.io/yii2-basic-advanced.html</loc>
+        <lastmod>2017-11-27T15:16:13.453Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://atoumus.github.io/vagrant-vbox-win-10-failed-create-adapter.html</loc>
+        <lastmod>2017-11-27T15:16:13.451Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://atoumus.github.io/test-site-by-other-country-ip.html</loc>
+        <lastmod>2017-11-27T15:16:13.417Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://atoumus.github.io/rework.html</loc>
+        <lastmod>2017-11-27T15:16:13.412Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://atoumus.github.io/php-manage-cron-sh.html</loc>
+        <lastmod>2017-11-27T15:16:13.408Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://atoumus.github.io/init-post.html</loc>
+        <lastmod>2017-11-27T15:16:13.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://atoumus.github.io/book-web-dev-yii2.html</loc>
+        <lastmod>2017-11-27T15:16:13.397Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://atoumus.github.io/art-of-mind.html</loc>
+        <lastmod>2017-11-27T15:16:13.390Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://atoumus.github.io/2017-php-trends.html</loc>
-        <lastmod>2017-10-03T08:59:58.883Z</lastmod>
+        <lastmod>2017-11-27T15:16:13.310Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://atoumus.github.io/init-post.html</loc>
+        <lastmod>2017-10-10T19:28:26.605Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -31,88 +119,8 @@
     </url>
 
     <url>
-        <loc>http://atoumus.github.io/yii2-basic-advanced.html</loc>
-        <lastmod>2016-08-17T17:36:54.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://atoumus.github.io/yii2-i18n.html</loc>
-        <lastmod>2016-08-17T17:34:56.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://atoumus.github.io/yii2-flash-messages.html</loc>
-        <lastmod>2016-08-11T19:58:18.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://atoumus.github.io/book-web-dev-yii2.html</loc>
-        <lastmod>2016-08-04T18:06:58.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://atoumus.github.io/vagrant-vbox-win-10-failed-create-adapter.html</loc>
-        <lastmod>2016-08-03T18:38:30.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://atoumus.github.io/rework.html</loc>
-        <lastmod>2016-04-06T20:10:30.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://atoumus.github.io/php-manage-cron-sh.html</loc>
-        <lastmod>2016-04-01T18:45:10.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://atoumus.github.io/art-of-mind.html</loc>
-        <lastmod>2016-03-16T19:15:50.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://atoumus.github.io/php-detect-country-by-ip.html</loc>
         <lastmod>2016-03-16T10:26:02.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://atoumus.github.io/test-site-by-other-country-ip.html</loc>
-        <lastmod>2016-03-16T02:18:26.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://atoumus.github.io/init-post.html</loc>
-        <lastmod>2016-01-06T19:35:20.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
