@@ -926,17 +926,4 @@
     
   </entry>
   
-  <entry>
-    <title><![CDATA[Init post]]></title>
-    <link href="http://atoumus.github.io/init-post.html"/>
-    <id>http://atoumus.github.io/init-post.html</id>
-    <published>2016-01-07T06:31:41.000Z</published>
-    <updated>2017-10-10T19:28:26.605Z</updated>
-    <content type="html"><![CDATA[<p>Hello from <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a> :)</p>]]></content>
-    <summary type="html">
-    <![CDATA[<p>Hello from <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a> :)</p>]]>
-    </summary>
-    
-  </entry>
-  
 </feed>

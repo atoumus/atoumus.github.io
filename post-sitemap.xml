@@ -95,14 +95,6 @@
     </url>
 
     <url>
-        <loc>http://atoumus.github.io/init-post.html</loc>
-        <lastmod>2017-10-10T19:28:26.605Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://atoumus.github.io/2016-php-trends.html</loc>
         <lastmod>2016-11-05T04:20:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
