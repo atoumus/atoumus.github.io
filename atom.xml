@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="https://github.com/miniflux/picoFeed">PicoFeed</generator>
+  <title>Atoumus Blog</title>
+  <id>http://atoumus.github.io/atom.xml</id>
+  <updated>2017-11-28T15:08:38+00:00</updated>
+  <link rel="alternate" type="text/html" href="http://atoumus.github.io/"/>
+  <link rel="self" type="application/atom+xml" href="http://atoumus.github.io/atom.xml"/>
+  <author>
+    <name>atoumus</name>
+    <email>atoumus@gmail.com</email>
+    <uri>http://atoumus.github.io/</uri>
+  </author>
+  <entry>
+    <id>http://atoumus.github.io/2017-php-trends.html</id>
+    <title>Что учить PHP разработчику в 2017 году</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/2017-php-trends.html"/>
+    <updated>2017-10-03T00:00:00+00:00</updated>
+    <published>2017-10-03T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Что должен знать современный PHP разработчик? Минимум технологий, это: HTML, CSS, PHP, MySQL, JavaScript и jQuery. Но это самые основы, которых сейчас уже недостаточно для того что бы быть конкурентно способным. Web разработка, и конкретно PHP, развиваютс...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/yii2-swiftmailer.html</id>
+    <title>Yii2 - Отправка писем с помощью Swiftmailer</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/yii2-swiftmailer.html"/>
+    <updated>2016-08-20T00:00:00+00:00</updated>
+    <published>2016-08-20T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>В Yii2 уже встроен по умолчанию компонент отправки писем, в качестве которого используется Swiftmailer. Рассмотрим на примере тонкости работы с этим компонентом, такие как передача параметров в layout и пр. Задача Необходимо настроить отправку писем, так ...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/yii2-i18n.html</id>
+    <title>Yii2 - Интернационализация проекта (мультиязычность)</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/yii2-i18n.html"/>
+    <updated>2016-08-12T00:00:00+00:00</updated>
+    <published>2016-08-12T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Рассмотрим пример интернационализации сайта на Yii2 на двух языках: ru и en. В Yii2 уже встроен компонент отвечающий за интернационализацию, называется он i18n. Для того что бы можно было начать им пользоваться, достаточно добавить его в конфигурацию прил...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/yii2-flash-messages.html</id>
+    <title>Yii2 - Отображение флеш (пользовательских) сообщений на сайте</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/yii2-flash-messages.html"/>
+    <updated>2016-08-10T00:00:00+00:00</updated>
+    <published>2016-08-10T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Как отображать простейшие пользовательские уведомления на сайте с использованием фреймворка Yii2. Немного теории Флеш сообщения в данном случае - это уведомления отображаемые пользователю при каких либо событиях. В Yii2 уже встроен механизм для работы с ф...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/yii2-basic-advanced.html</id>
+    <title>Yii2 - Установка basic и advanced шаблонов приложения через Composer</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/yii2-basic-advanced.html"/>
+    <updated>2016-08-10T00:00:00+00:00</updated>
+    <published>2016-08-10T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Yii2 предоставляет возможность начать разработку нового проекта с уже готового &amp;quot;каркаса&amp;quot;. На выбор предоставляется два шаблона приложения: basic и advanced. Об их отличиях и установке пойдет речь в этой статье. Шаблон приложения basic это &amp;quot;...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/book-web-dev-yii2.html</id>
+    <title>Книги - Разработка веб-приложений в Yii 2 (Марк Сафронов)</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/book-web-dev-yii2.html"/>
+    <updated>2016-08-05T00:00:00+00:00</updated>
+    <published>2016-08-05T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Книга о популярном фреймворке Yii версии 2. Автор рассматривает различные аспекты данного фреймворка, а также то как они работают изнутри. Подход к изучению Yii 2 в этой книге немного не такой, какой обычно используется в подобной литературе. В начале кни...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/vagrant-vbox-win-10-failed-create-adapter.html</id>
+    <title>Vagrant / VirtualBox - Ошибка Failed to create the host-only adapter</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/vagrant-vbox-win-10-failed-create-adapter.html"/>
+    <updated>2016-08-04T00:00:00+00:00</updated>
+    <published>2016-08-04T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>При использовании Vagrant как средства для развертывания виртуальной машины на Windows 10 начала возникать ошибка: Failed to create the host-only adapter. Далее о том как ее исправить. Имеем: Windows 10 / Vagrant 1.8.5 / VirtualBox 5.1.2 При выполнении ко...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/rework.html</id>
+    <title>Книги - Rework Бизнес без предрассудков (Джейсон Фрайд, Дэвид Хейнмейер Ханссон)</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/rework.html"/>
+    <updated>2016-04-07T00:00:00+00:00</updated>
+    <published>2016-04-07T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Книга от создателей компании 37signals. О том как правильно создавать и управлять компанией. Авторы предлагают отказаться от стандартных практик в этом деле и предлагают свои неординарные подходы. Есть в этой книге немало полезных мыслей. Но есть и &amp;quot;...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/php-manage-cron-sh.html</id>
+    <title>PHP - Управление cron'ом с помощью cron_manager.sh</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/php-manage-cron-sh.html"/>
+    <updated>2016-04-02T00:00:00+00:00</updated>
+    <published>2016-04-02T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>В каждом PHP проекте есть скрипты которые нужно запускать по крону. Когда таких скриптов становиться много, то возникает необходимость их хранить в каком-то конфиге проекта. А если еще и нет root доступа к серверу, то каждый раз дергать админа что бы он п...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/php-detect-country-by-ip.html</id>
+    <title>PHP - получаем гео-инфо пользователя по IP</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/php-detect-country-by-ip.html"/>
+    <updated>2016-03-16T00:00:00+00:00</updated>
+    <published>2016-03-16T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>В продолжение темы про IP, в этой статье будут рассмотрены способы определения страны, города и другой гео-ино о пользователе по его IP. GeoIP в виде PHP расширения Наверное самая часто используемая библиотека для определения IP (оф. док на php.net). Оно ...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/art-of-mind.html</id>
+    <title>Книги - Искусство думать (Эдвард де Боно)</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/art-of-mind.html"/>
+    <updated>2016-03-16T00:00:00+00:00</updated>
+    <published>2016-03-16T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Книга о том, как находить выход в казалось бы безвыходных ситуациях. О том как развить неординарное мышление. В этой статье дается обзор, оценка и некоторые цитаты из книги. В целом основную мысль книги можно сформулировать так: Не нужно зацикливаться на ...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/test-site-by-other-country-ip.html</id>
+    <title>Как проверить сайт под IP другой страны через прокси сервер</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/test-site-by-other-country-ip.html"/>
+    <updated>2016-02-07T00:00:00+00:00</updated>
+    <published>2016-02-07T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Иногда возникает необходимость зайти на свой сайт под IP другой страны. Например что бы проверить ту или иную функциональность, которая работает по разному в зависимости с IP какой страны зашел пользователь. В этой статье будут рассмотрены способы как это...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/2016-php-trends.html</id>
+    <title>Что учить PHP разработчику в 2016 году</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/2016-php-trends.html"/>
+    <updated>2016-02-05T00:00:00+00:00</updated>
+    <published>2016-02-05T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Что должен знать современный PHP разработчик? Минимум технологий, это: HTML, CSS, PHP, MySQL, JavaScript и jQuery. Но это самые основы, которых сейчас уже недостаточно для того что бы быть конкурентно способным. Web разработка, и конкретно PHP, развиваютс...</summary>
+  </entry>
+</feed>

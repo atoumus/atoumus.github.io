@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <url>
+  <loc>http://atoumus.github.io/</loc>
+  <lastmod>2017-11-28T17:08:38+02:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="http://atoumus.github.io/en/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/en/</loc>
+  <lastmod>2017-11-28T17:08:38+02:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="http://atoumus.github.io/en/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/PHP/</loc>
+  <lastmod>2017-10-03T00:00:00+03:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/PHP/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/Self-study/</loc>
+  <lastmod>2017-10-03T00:00:00+03:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/Self-study/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/Yii2/</loc>
+  <lastmod>2016-08-20T00:00:00+03:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/Yii2/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/Books/</loc>
+  <lastmod>2016-08-05T00:00:00+03:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/Books/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/VirtualBox/</loc>
+  <lastmod>2016-08-04T00:00:00+03:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/VirtualBox/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="http://atoumus.github.io/en/tag/VirtualBox/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/Vagrant/</loc>
+  <lastmod>2016-08-04T00:00:00+03:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/Vagrant/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="http://atoumus.github.io/en/tag/Vagrant/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/Cron/</loc>
+  <lastmod>2016-04-02T00:00:00+03:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/Cron/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/Bash/</loc>
+  <lastmod>2016-04-02T00:00:00+03:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/Bash/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/Linux/</loc>
+  <lastmod>2016-04-02T00:00:00+03:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/Linux/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/GeoIP/</loc>
+  <lastmod>2016-03-16T00:00:00+02:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/GeoIP/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/Sypex+Geo/</loc>
+  <lastmod>2016-03-16T00:00:00+02:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/Sypex+Geo/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/IP2LOCATION/</loc>
+  <lastmod>2016-03-16T00:00:00+02:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/IP2LOCATION/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/TabGeo/</loc>
+  <lastmod>2016-03-16T00:00:00+02:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/TabGeo/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/Tor/</loc>
+  <lastmod>2016-02-07T00:00:00+02:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/Tor/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/Proxy+SwitchyOmega/</loc>
+  <lastmod>2016-02-07T00:00:00+02:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/Proxy+SwitchyOmega/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/ZenMate/</loc>
+  <lastmod>2016-02-07T00:00:00+02:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/ZenMate/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/en/tag/VirtualBox/</loc>
+  <lastmod>2016-08-04T00:00:00+03:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/VirtualBox/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="http://atoumus.github.io/en/tag/VirtualBox/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/en/tag/Vagrant/</loc>
+  <lastmod>2016-08-04T00:00:00+03:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/Vagrant/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="http://atoumus.github.io/en/tag/Vagrant/"/>
+ </url>
+</urlset>

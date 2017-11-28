@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <url>
+  <loc>http://atoumus.github.io/</loc>
+  <lastmod>2017-11-28T17:08:38+02:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="http://atoumus.github.io/en/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/en/</loc>
+  <lastmod>2017-11-28T17:08:38+02:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="http://atoumus.github.io/en/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/2017-php-trends.html</loc>
+  <lastmod>2017-10-03T00:00:00+03:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/2017-php-trends.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/yii2-swiftmailer.html</loc>
+  <lastmod>2016-08-20T00:00:00+03:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/yii2-swiftmailer.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/yii2-i18n.html</loc>
+  <lastmod>2016-08-12T00:00:00+03:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/yii2-i18n.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/yii2-flash-messages.html</loc>
+  <lastmod>2016-08-10T00:00:00+03:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/yii2-flash-messages.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/yii2-basic-advanced.html</loc>
+  <lastmod>2016-08-10T00:00:00+03:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/yii2-basic-advanced.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/book-web-dev-yii2.html</loc>
+  <lastmod>2016-08-05T00:00:00+03:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/book-web-dev-yii2.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/vagrant-vbox-win-10-failed-create-adapter.html</loc>
+  <lastmod>2016-08-04T00:00:00+03:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/vagrant-vbox-win-10-failed-create-adapter.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="http://atoumus.github.io/en/vagrant-vbox-win-10-failed-create-adapter.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/rework.html</loc>
+  <lastmod>2016-04-07T00:00:00+03:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/rework.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/php-manage-cron-sh.html</loc>
+  <lastmod>2016-04-02T00:00:00+03:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/php-manage-cron-sh.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/php-detect-country-by-ip.html</loc>
+  <lastmod>2016-03-16T00:00:00+02:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/php-detect-country-by-ip.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/art-of-mind.html</loc>
+  <lastmod>2016-03-16T00:00:00+02:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/art-of-mind.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/test-site-by-other-country-ip.html</loc>
+  <lastmod>2016-02-07T00:00:00+02:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/test-site-by-other-country-ip.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/2016-php-trends.html</loc>
+  <lastmod>2016-02-05T00:00:00+02:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/2016-php-trends.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/en/vagrant-vbox-win-10-failed-create-adapter.html</loc>
+  <lastmod>2016-08-04T00:00:00+03:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/vagrant-vbox-win-10-failed-create-adapter.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="http://atoumus.github.io/en/vagrant-vbox-win-10-failed-create-adapter.html"/>
+ </url>
+</urlset>

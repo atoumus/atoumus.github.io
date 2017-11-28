@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Host: atoumus.github.io
+Sitemap: http://atoumus.github.io/sitemap.xml
