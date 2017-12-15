@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
  <url>
   <loc>http://atoumus.github.io/</loc>
-  <lastmod>2017-11-28T17:58:34+02:00</lastmod>
+  <lastmod>2017-12-15T11:30:55+02:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
@@ -10,11 +10,18 @@
  </url>
  <url>
   <loc>http://atoumus.github.io/en/</loc>
-  <lastmod>2017-11-28T17:58:34+02:00</lastmod>
+  <lastmod>2017-12-15T11:30:55+02:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
   <xhtml:link rel="alternate" hreflang="en" href="http://atoumus.github.io/en/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/Learning/</loc>
+  <lastmod>2017-12-15T00:00:00+02:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/Learning/"/>
  </url>
  <url>
   <loc>http://atoumus.github.io/tag/PHP/</loc>
@@ -22,13 +29,6 @@
   <changefreq>weekly</changefreq>
   <priority>0.2</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/PHP/"/>
- </url>
- <url>
-  <loc>http://atoumus.github.io/tag/Self-study/</loc>
-  <lastmod>2017-10-03T00:00:00+03:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.2</priority>
-  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/Self-study/"/>
  </url>
  <url>
   <loc>http://atoumus.github.io/tag/Yii2/</loc>
