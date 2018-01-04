@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
  <url>
   <loc>http://atoumus.github.io/</loc>
-  <lastmod>2018-01-01T12:57:06+02:00</lastmod>
+  <lastmod>2018-01-04T17:23:58+02:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
@@ -10,7 +10,7 @@
  </url>
  <url>
   <loc>http://atoumus.github.io/en/</loc>
-  <lastmod>2018-01-01T12:57:06+02:00</lastmod>
+  <lastmod>2018-01-04T17:23:58+02:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
@@ -114,6 +114,13 @@
   <changefreq>monthly</changefreq>
   <priority>0.6</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/2016-php-trends.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/php-write-read-binary-files.html</loc>
+  <lastmod>2014-03-04T00:00:00+02:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/php-write-read-binary-files.html"/>
  </url>
  <url>
   <loc>http://atoumus.github.io/en/vagrant-vbox-win-10-failed-create-adapter.html</loc>
