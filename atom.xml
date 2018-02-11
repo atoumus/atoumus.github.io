@@ -3,7 +3,7 @@
   <generator uri="https://github.com/miniflux/picoFeed">PicoFeed</generator>
   <title>Atoumus Blog</title>
   <id>http://atoumus.github.io/atom.xml</id>
-  <updated>2018-01-04T15:23:59+00:00</updated>
+  <updated>2018-02-11T04:49:23+00:00</updated>
   <link rel="alternate" type="text/html" href="http://atoumus.github.io/"/>
   <link rel="self" type="application/atom+xml" href="http://atoumus.github.io/atom.xml"/>
   <author>
@@ -205,5 +205,18 @@
       <uri>http://atoumus.github.io/</uri>
     </author>
     <summary>Для записи и чтения бинарных файлов в PHP есть две функции pack() и unpack(). Более подробно они писаны на оф. сайте: http://www.php.net/manual/ru/function.pack.php http://www.php.net/manual/ru/function.unpack.php Пример записи и чтения массива Далее прим...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/book-clean-code.html</id>
+    <title>Книги - Чистый Код. Создание, анализ и рефакторинг (Роберт Мартин)</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/book-clean-code.html"/>
+    <updated>2013-03-30T00:00:00+00:00</updated>
+    <published>2013-03-30T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>На днях закончил читать книгу Роберта Мартина - Чистый Код. В основном в ней идет речь про ООП программирование, про то как правильно организовывать программный код в классы, методы и функции, что бы его можно было легко поддерживать. Примеры кода приводя...</summary>
   </entry>
 </feed>
