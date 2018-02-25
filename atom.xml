@@ -3,7 +3,7 @@
   <generator uri="https://github.com/miniflux/picoFeed">PicoFeed</generator>
   <title>Atoumus Blog</title>
   <id>http://atoumus.github.io/atom.xml</id>
-  <updated>2018-02-21T04:22:56+00:00</updated>
+  <updated>2018-02-25T04:32:45+00:00</updated>
   <link rel="alternate" type="text/html" href="http://atoumus.github.io/"/>
   <link rel="self" type="application/atom+xml" href="http://atoumus.github.io/atom.xml"/>
   <author>
@@ -218,6 +218,19 @@
       <uri>http://atoumus.github.io/</uri>
     </author>
     <summary>На днях закончил читать книгу Роберта Мартина - Чистый Код. В основном в ней идет речь про ООП программирование, про то как правильно организовывать программный код в классы, методы и функции, что бы его можно было легко поддерживать. Примеры кода приводя...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/php-profiling-xdebug-webgrind.html</id>
+    <title>PHP - Профилирование кода с помощью XDebug и WebGrind</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/php-profiling-xdebug-webgrind.html"/>
+    <updated>2013-03-17T00:00:00+00:00</updated>
+    <published>2013-03-17T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Зачастую требуется находить в PHP скриптах те места кода, которые создают наибольшую нагрузку. Для того что это сделать, мы будем использовать XDebug. Этот инструмент создает лог работы PHP скрипта в своем специфическом формате. Для того что бы этот лог м...</summary>
   </entry>
   <entry>
     <id>http://atoumus.github.io/css-numeric-list.html</id>

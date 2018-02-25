@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
  <url>
   <loc>http://atoumus.github.io/</loc>
-  <lastmod>2018-02-21T06:22:55+02:00</lastmod>
+  <lastmod>2018-02-25T06:32:45+02:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
@@ -10,7 +10,7 @@
  </url>
  <url>
   <loc>http://atoumus.github.io/en/</loc>
-  <lastmod>2018-02-21T06:22:55+02:00</lastmod>
+  <lastmod>2018-02-25T06:32:45+02:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
@@ -129,6 +129,20 @@
   <changefreq>weekly</changefreq>
   <priority>0.2</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/ZenMate/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/XDebug/</loc>
+  <lastmod>2013-03-17T00:00:00+02:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/XDebug/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/WebGrind/</loc>
+  <lastmod>2013-03-17T00:00:00+02:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/WebGrind/"/>
  </url>
  <url>
   <loc>http://atoumus.github.io/tag/CSS/</loc>
