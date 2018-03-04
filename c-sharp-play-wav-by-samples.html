@@ -1,0 +1,176 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>C# - Проигрывание WAV файла по частям (семплам) | Atoumus Blog</title> <link rel="alternate" href="http://atoumus.github.io/c-sharp-play-wav-by-samples.html" hreflang="ru" /> <link rel="alternate" href="http://atoumus.github.io/en/" hreflang="en" /> <link rel="alternate" type="application/atom+xml" title="Atoumus Blog" href="/atom.xml" /> <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> <link rel="stylesheet" type="text/css" href="/css/libs/flaticon/flaticon.css"> <link rel="stylesheet" type="text/css" href="/css/libs/prism.css"> <link rel="stylesheet" type="text/css" href="/css/libs/prism-fix.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css" /> <link rel="stylesheet" type="text/css" href="/css/common.css"> </head> <body> <a href="#top" class="elevator"><span class="flaticon-upwards-arrow"></span></a> <a name="top"></a> <div class="main"> <div class="header"> <a href="/" class="logo" title="Atoumus Blog" ><img src="/images/logo.png">Atoumus Blog</a> <form class="search" action="//google.com/search" target="_blank" method="get" accept-charset="UTF-8"> <input type="search" name="q" class="search-input"> <button type="submit">Поиск</button> <input type="hidden" name="sitesearch" value="http://atoumus.github.io"> </form> <div class="social"> <a href="#" class="search-toggle flaticon-magnifier" title="Поиск"></a> <a href="/atom.xml" target="_blank" class="flaticon-rss-feed-button" title="Atom лента"></a> <a href="https://twitter.com/atoumus/" target="_blank" class="flaticon-twitter-logo-silhouette" title="Twitter"></a> <a href="https://plus.google.com/u/0/116624784918762784912" target="_blank" class="flaticon-google-plus-logo-button" title="G+"></a> </div> </div> <div class="clear-both"></div> <div class="menu"> <div class="tags"> <a href='/'>Главная</a><a href='/tag/Yii/'>Yii</a><a href='/tag/PHP/'>PHP</a><a href='/tag/Books/'>Книги</a><a href='/tag/Learning/'>Обучение</a><a href='/tag/Zend Framework/'>Zend Framework</a><a href='/tag/Tor/'>Tor</a><a href='/tag/C Sharp/' class='selected'>C#</a><a href='/tag/Drupal/'>Drupal</a><a href='/tag/Others/'>Прочее</a> </div> <div class="lang-switcher"> <span>ru</span><a href='/en/'>en</a> </div> </div> <div class="clear-both"></div> <div class="contents"> <div class="article"> <h1>C# - Проигрывание WAV файла по частям (семплам)</h1> <div class="meta"> <div> <span class="flaticon-calendar-with-spring-binder-and-date-blocks"></span> 2011-03-18 </div> <div> <span class="flaticon-commerce"></span> <a href='/tag/C Sharp/'>C#</a> </div> <div class="comments-number"> <span class="flaticon-comment-white-oval-bubble"></span> <a href="#comments" data-disqus-url="http://atoumus.github.io/c-sharp-play-wav-by-samples.html"></a> </div> </div> <div class="clear-both"></div> <div class="text"><p>Иногда возникает необходимость проигрывать из WAV файла определенные части, например, в WAV файл можно сохранить набор звуков для вашего приложения и воспроизводить их оттуда при надобности. Про то как это сделать и пойдет речь в этой статье.</p> <p>Для этой цели очень хорошо подходит следующий класс:</p> <pre class="line-numbers"><code class="language-csharp">using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Text;
+using System.Media;
+using System.IO;
+using System.Runtime.InteropServices;
+
+namespace MyNamespace
+{
+    class Audio
+    {
+        #region SoundMixer
+        [DllImport("coredll.dll", SetLastError = true)]
+        protected static extern int waveOutSetVolume(IntPtr device, uint volume);
+        //values for 'volume' are between value between 0 (off) and 65536 (max)
+        //if there is only one audio device, you can set 'device' to null (or IntPtr.Zero)
+        public enum Volumes : int
+        {
+            OFF = 0,
+            LOW = 858993459,
+            NORMAL = 1717986918,
+            MEDIUM = -1717986919,
+            HIGH = -858993460,
+            VERY_HIGH = -1
+        }
+        [DllImport("coredll.dll", SetLastError = true)]
+        internal static extern int waveOutSetVolume(IntPtr device, int volume);
+        [DllImport("coredll.dll", SetLastError = true)]
+        internal static extern int waveOutGetVolume(IntPtr device, ref int volume);
+        public void VolumeLevelUP()
+        {
+            int v = (int)0;
+            int Value = 0;
+            waveOutGetVolume(IntPtr.Zero, ref v);
+            switch (v)
+            {
+                case (int)Volumes.OFF:
+                    Value = (int)Volumes.LOW;
+                    break;
+                case (int)Volumes.LOW:
+                    Value = (int)Volumes.NORMAL;
+                    break;
+                case (int)Volumes.NORMAL:
+                    Value = (int)Volumes.MEDIUM;
+                    break;
+                case (int)Volumes.MEDIUM:
+                    Value = (int)Volumes.HIGH;
+                    break;
+                case (int)Volumes.HIGH:
+                    Value = (int)Volumes.VERY_HIGH;
+                    break;
+                case (int)Volumes.VERY_HIGH:
+                    Value = (int)Volumes.OFF;
+                    break;
+                default: Value = (int)Volumes.VERY_HIGH;
+                    break;
+            }
+            waveOutSetVolume(IntPtr.Zero, Value);
+        }
+        public void VolumeLevelDown()
+        {
+            int v = (int)0;
+            int Value = 0;
+            waveOutGetVolume(IntPtr.Zero, ref v);
+            switch (v)
+            {
+                case (int)Volumes.OFF:
+                    Value = (int)Volumes.VERY_HIGH;
+                    break;
+                case (int)Volumes.LOW:
+                    Value = (int)Volumes.OFF;
+                    break;
+                case (int)Volumes.NORMAL:
+                    Value = (int)Volumes.LOW;
+                    break;
+                case (int)Volumes.MEDIUM:
+                    Value = (int)Volumes.NORMAL;
+                    break;
+                case (int)Volumes.HIGH:
+                    Value = (int)Volumes.MEDIUM;
+                    break;
+                case (int)Volumes.VERY_HIGH:
+                    Value = (int)Volumes.HIGH;
+                    break;
+                default: Value = (int)Volumes.OFF;
+                    break;
+            }
+            waveOutSetVolume(IntPtr.Zero, Value);
+        }
+
+        #endregion
+        #region declaretion
+        private const byte WavHeaderSize = 40; //Размер заголовка Wav файла без размера тела (4 байта еще)
+        private const byte WavHeaderBodyLenghSize = 4;// Размер тела WAV файла
+        private string WavFileName; // Путь к файлу
+        public byte[] SoundBuffHeader;
+        private byte[] SoundBuffMain;
+        public int BuffSize = 600000; //размер буфера
+        public SoundPlayer Player;
+        private FileStream FileStreamWav;
+        private Stream SoundStream;
+        #endregion
+        public Audio(string fileName)
+        {
+            this.WavFileName = fileName;
+
+            //Буфера wav фала
+            SoundBuffHeader = new byte[WavHeaderSize + WavHeaderBodyLenghSize];
+            FileStreamWav = File.Open(WavFileName, FileMode.Open);
+            SoundBuffMain = new byte[FileStreamWav.Length - WavHeaderSize - WavHeaderBodyLenghSize];
+            #region BufferRead
+            // Считывание заголовка
+            FileStreamWav.Position = 0;
+            FileStreamWav.Read(SoundBuffHeader, 0, WavHeaderSize); // Заголовок кроме последней длины
+
+            #endregion
+            SoundStream = new MemoryStream();
+            Player = new SoundPlayer();
+            Player.Stream = new MemoryStream();
+        }
+        //Воспроизводит WAV файлы
+        public void PlaySound(int StartPosition, int StopPosition)
+        {
+            MemoryClear();
+
+            Player = new SoundPlayer();
+            Player.Stream = new MemoryStream();
+            int PlayingSoundSize = 0; // Размер тела wav файла
+            byte[] DataLenArray;
+
+            PlayingSoundSize = StopPosition - StartPosition;
+            // Запись в заголовок информации о размере тела файла
+            DataLenArray = BitConverter.GetBytes(PlayingSoundSize);
+            DataLenArray.CopyTo(SoundBuffHeader, WavHeaderSize);
+            DataLenArray = BitConverter.GetBytes(PlayingSoundSize + WavHeaderSize - WavHeaderBodyLenghSize);
+            DataLenArray.CopyTo(SoundBuffHeader, WavHeaderBodyLenghSize);
+
+            //Запись заголовка в проигрываемый файл
+            Player.Stream.Position = 0;
+            Player.Stream.Write(SoundBuffHeader, 0, SoundBuffHeader.Length);
+            // Запись самого тела
+
+            byte[] test = new byte[PlayingSoundSize];
+            FileStreamWav.Position = StartPosition;
+            FileStreamWav.Read(test, 0, PlayingSoundSize); // Весь файл кроме заголовка
+            Player.Stream.Write(test, 0, test.Length);
+            Player.Stream.Position = 0;
+
+            Player.Load();
+            Player.Play();
+
+        }
+        //Остановка плеера
+        public void StopPlaying()
+        {
+            Player.Stop();
+            MemoryClear();
+        }
+
+        private void MemoryClear()
+        {
+            try
+            {
+                Player.Stream.Close();
+                Player.Dispose();
+                GC.SuppressFinalize(Player);
+                GC.Collect();
+                long check3 = GC.GetTotalMemory(true);
+            }
+            catch (Exception v)
+            {
+            }
+        }
+    }
+}</code></pre> <p>Далее, создаем экземпляр данного класса, указав в качестве параметра WAV файл и воспроизводим необходимые нам отрезки из данного файла.</p> <p>Взято с <a target="_blank" href="http://forum.vingrad.ru/forum/topic-261721/anchor-entry1885131/0.html">http://forum.vingrad.ru/forum/topic-261721/anchor-entry1885131/0.html</a></p></div> <div class="share">Поделится: <script type="text/javascript">(function () { if (window.pluso) if (typeof window.pluso.start == "function") return; if (window.ifpluso == undefined) { window.ifpluso = 1; var d = document, s = d.createElement('script'), g = 'getElementsByTagName'; s.type = 'text/javascript'; s.charset = 'UTF-8'; s.async = true; s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js'; var h = d[g]('body')[0]; h.appendChild(s); } })();</script> <div class="pluso" data-background="transparent" data-options="small,round,line,horizontal,counter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print"></div></div>   <div class="comments"> <a name="comments"></a> <div id="disqus_thread"></div> <script> var disqus_config = function () { this.page.url = "http://atoumus.github.io/c-sharp-play-wav-by-samples.html"; this.page.identifier = "c-sharp-play-wav-by-samples"; this.language = "ru"; }; (function() { var d = document, s = d.createElement('script'); s.src = 'https://atoumus.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })(); </script> <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> </div> </div> </div> <div class="footer"> <div class="left"> <div class="social"> <a href="#" class="icon search-toggle flaticon-magnifier" title="Поиск"></a> <a href="/atom.xml" target="_blank" class="icon flaticon-rss-feed-button" title="Atom лента"></a> <a href="https://twitter.com/atoumus/" target="_blank" class="icon flaticon-twitter-logo-silhouette" title="Twitter"></a> <a href="https://plus.google.com/u/0/116624784918762784912" target="_blank" class="icon flaticon-google-plus-logo-button" title="G+"></a> </div> <div class="author-email"> <a data-email-array='{"16":"m","4":"m","7":"@","10":"a","6":"s","5":"u","15":"o","9":"m","1":"t","14":"c","8":"g","13":".","0":"a","12":"l","3":"u","11":"i","2":"o"}' href="#"></a> </div> <div class="donate"> <a href="http://yasobe.ru/na/atoumus_blog" target="_blank">Поддержать финансово</a> </div> </div> <div class="right"> <div>  <script type="text/javascript"> document.write("<a href='//www.liveinternet.ru/click' "+ "target=_blank><img src='//counter.yadro.ru/hit?t25.5;r"+ escape(document.referrer)+((typeof(screen)=="undefined")?"": ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth? screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+ ";"+Math.random()+ "' alt='' title='LiveInternet: показано число посетителей за"+ " сегодня' "+ "border='0' width='88' height='15'><\/a>") </script>  </div> <div> Atoumus Blog &copy; 2011 - 2018 </div> <div> Копирование и цитирование с обязательным указанием URL ссылки на оригинал страницы </div> </div> </div> <div class="clear-both"></div> </div> <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script> <script type="text/javascript" src="/js/libs/prism.js"></script> <script type="text/javascript" src="/js/common.js"></script> </body> </html>

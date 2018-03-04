@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
  <url>
   <loc>http://atoumus.github.io/</loc>
-  <lastmod>2018-02-25T06:32:45+02:00</lastmod>
+  <lastmod>2018-03-04T06:57:25+02:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
@@ -10,7 +10,7 @@
  </url>
  <url>
   <loc>http://atoumus.github.io/en/</loc>
-  <lastmod>2018-02-25T06:32:45+02:00</lastmod>
+  <lastmod>2018-03-04T06:57:25+02:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
@@ -143,6 +143,27 @@
   <changefreq>weekly</changefreq>
   <priority>0.2</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/WebGrind/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/Zend+Framework/</loc>
+  <lastmod>2012-08-22T00:00:00+03:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/Zend+Framework/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/Drupal/</loc>
+  <lastmod>2011-08-23T00:00:00+03:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/Drupal/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/tag/C+Sharp/</loc>
+  <lastmod>2011-03-18T00:00:00+02:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/C+Sharp/"/>
  </url>
  <url>
   <loc>http://atoumus.github.io/tag/CSS/</loc>

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
  <url>
   <loc>http://atoumus.github.io/</loc>
-  <lastmod>2018-02-25T06:32:44+02:00</lastmod>
+  <lastmod>2018-03-04T06:57:25+02:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
@@ -10,7 +10,7 @@
  </url>
  <url>
   <loc>http://atoumus.github.io/en/</loc>
-  <lastmod>2018-02-25T06:32:44+02:00</lastmod>
+  <lastmod>2018-03-04T06:57:25+02:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
@@ -135,6 +135,34 @@
   <changefreq>monthly</changefreq>
   <priority>0.6</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/php-profiling-xdebug-webgrind.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/zend-framework-run-cron-scripts.html</loc>
+  <lastmod>2012-08-22T00:00:00+03:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/zend-framework-run-cron-scripts.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/zend-framework-1-setting-up-zend-tool-on-ubuntu.html</loc>
+  <lastmod>2012-08-14T00:00:00+03:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/zend-framework-1-setting-up-zend-tool-on-ubuntu.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/drupal7-make-rubrics-list.html</loc>
+  <lastmod>2011-08-23T00:00:00+03:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/drupal7-make-rubrics-list.html"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/c-sharp-play-wav-by-samples.html</loc>
+  <lastmod>2011-03-18T00:00:00+02:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/c-sharp-play-wav-by-samples.html"/>
  </url>
  <url>
   <loc>http://atoumus.github.io/css-numeric-list.html</loc>

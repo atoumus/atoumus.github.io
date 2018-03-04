@@ -3,7 +3,7 @@
   <generator uri="https://github.com/miniflux/picoFeed">PicoFeed</generator>
   <title>Atoumus Blog</title>
   <id>http://atoumus.github.io/atom.xml</id>
-  <updated>2018-02-25T04:32:45+00:00</updated>
+  <updated>2018-03-04T04:57:26+00:00</updated>
   <link rel="alternate" type="text/html" href="http://atoumus.github.io/"/>
   <link rel="self" type="application/atom+xml" href="http://atoumus.github.io/atom.xml"/>
   <author>
@@ -39,7 +39,7 @@
   </entry>
   <entry>
     <id>http://atoumus.github.io/yii2-swiftmailer.html</id>
-    <title>Yii2 - Отправка писем с помощью Swiftmailer</title>
+    <title>Yii 2 - Отправка писем с помощью Swiftmailer</title>
     <link rel="alternate" type="text/html" href="http://atoumus.github.io/yii2-swiftmailer.html"/>
     <updated>2016-08-20T00:00:00+00:00</updated>
     <published>2016-08-20T00:00:00+00:00</published>
@@ -52,7 +52,7 @@
   </entry>
   <entry>
     <id>http://atoumus.github.io/yii2-i18n.html</id>
-    <title>Yii2 - Интернационализация проекта (мультиязычность)</title>
+    <title>Yii 2 - Интернационализация проекта (мультиязычность)</title>
     <link rel="alternate" type="text/html" href="http://atoumus.github.io/yii2-i18n.html"/>
     <updated>2016-08-12T00:00:00+00:00</updated>
     <published>2016-08-12T00:00:00+00:00</published>
@@ -65,7 +65,7 @@
   </entry>
   <entry>
     <id>http://atoumus.github.io/yii2-flash-messages.html</id>
-    <title>Yii2 - Отображение флеш (пользовательских) сообщений на сайте</title>
+    <title>Yii 2 - Отображение флеш (пользовательских) сообщений на сайте</title>
     <link rel="alternate" type="text/html" href="http://atoumus.github.io/yii2-flash-messages.html"/>
     <updated>2016-08-10T00:00:00+00:00</updated>
     <published>2016-08-10T00:00:00+00:00</published>
@@ -78,7 +78,7 @@
   </entry>
   <entry>
     <id>http://atoumus.github.io/yii2-basic-advanced.html</id>
-    <title>Yii2 - Установка basic и advanced шаблонов приложения через Composer</title>
+    <title>Yii 2 - Установка basic и advanced шаблонов приложения через Composer</title>
     <link rel="alternate" type="text/html" href="http://atoumus.github.io/yii2-basic-advanced.html"/>
     <updated>2016-08-10T00:00:00+00:00</updated>
     <published>2016-08-10T00:00:00+00:00</published>
@@ -231,6 +231,58 @@
       <uri>http://atoumus.github.io/</uri>
     </author>
     <summary>Зачастую требуется находить в PHP скриптах те места кода, которые создают наибольшую нагрузку. Для того что это сделать, мы будем использовать XDebug. Этот инструмент создает лог работы PHP скрипта в своем специфическом формате. Для того что бы этот лог м...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/zend-framework-run-cron-scripts.html</id>
+    <title>Zend Framework 1 - запуск скриптов по cron'у</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/zend-framework-run-cron-scripts.html"/>
+    <updated>2012-08-22T00:00:00+00:00</updated>
+    <published>2012-08-22T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Иногда возникает необходимость запускать скрипты по крону. Для того что бы это сделать на Zend Framework, нужно сделать следующее. Создаем каталог cron в каталоге application. В каталоге cron создаем php файл с нужным именем, который необходимо запускать ...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/zend-framework-1-setting-up-zend-tool-on-ubuntu.html</id>
+    <title>Zend Framework 1 - Настройка Zend Tool в Ubuntu</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/zend-framework-1-setting-up-zend-tool-on-ubuntu.html"/>
+    <updated>2012-08-14T00:00:00+00:00</updated>
+    <published>2012-08-14T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Zend Tool предоставляет возможность работать с проектом на Zend Framework используя терминал. Существуют команды для создания проекта, контроллеров, модулей, моделей и пр. Он удобен тем, что освобождает программиста от рутинной работы. Например, при созда...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/drupal7-make-rubrics-list.html</id>
+    <title>Drupal 7 - Создание списка рубрик</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/drupal7-make-rubrics-list.html"/>
+    <updated>2011-08-23T00:00:00+00:00</updated>
+    <published>2011-08-23T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Столкнулся недавно с задачей – как в Drupal 7 создать категории или другими словами рубрики статей и как их отобразить в левом блоке сайта. Долго искал решение, в последствии все таки разобрался и решил поделится своим опытом. Для создания категорий стате...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/c-sharp-play-wav-by-samples.html</id>
+    <title>C# - Проигрывание WAV файла по частям (семплам)</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/c-sharp-play-wav-by-samples.html"/>
+    <updated>2011-03-18T00:00:00+00:00</updated>
+    <published>2011-03-18T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Иногда возникает необходимость проигрывать из WAV файла определенные части, например, в WAV файл можно сохранить набор звуков для вашего приложения и воспроизводить их оттуда при надобности. Про то как это сделать и пойдет речь в этой статье. Для этой цел...</summary>
   </entry>
   <entry>
     <id>http://atoumus.github.io/css-numeric-list.html</id>
