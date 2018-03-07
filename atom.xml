@@ -3,7 +3,7 @@
   <generator uri="https://github.com/miniflux/picoFeed">PicoFeed</generator>
   <title>Atoumus Blog</title>
   <id>http://atoumus.github.io/atom.xml</id>
-  <updated>2018-03-04T04:57:26+00:00</updated>
+  <updated>2018-03-07T05:13:16+00:00</updated>
   <link rel="alternate" type="text/html" href="http://atoumus.github.io/"/>
   <link rel="self" type="application/atom+xml" href="http://atoumus.github.io/atom.xml"/>
   <author>
@@ -48,7 +48,7 @@
       <email>atoumus@gmail.com</email>
       <uri>http://atoumus.github.io/</uri>
     </author>
-    <summary>В Yii2 уже встроен по умолчанию компонент отправки писем, в качестве которого используется Swiftmailer. Рассмотрим на примере тонкости работы с этим компонентом, такие как передача параметров в layout и пр. Задача Необходимо настроить отправку писем, так ...</summary>
+    <summary>В Yii 2 уже встроен по умолчанию компонент отправки писем, в качестве которого используется Swiftmailer. Рассмотрим на примере тонкости работы с этим компонентом, такие как передача параметров в layout и пр. Задача Необходимо настроить отправку писем, так...</summary>
   </entry>
   <entry>
     <id>http://atoumus.github.io/yii2-i18n.html</id>
@@ -61,7 +61,7 @@
       <email>atoumus@gmail.com</email>
       <uri>http://atoumus.github.io/</uri>
     </author>
-    <summary>Рассмотрим пример интернационализации сайта на Yii2 на двух языках: ru и en. В Yii2 уже встроен компонент отвечающий за интернационализацию, называется он i18n. Для того что бы можно было начать им пользоваться, достаточно добавить его в конфигурацию прил...</summary>
+    <summary>Рассмотрим пример интернационализации сайта на Yii 2 на двух языках: ru и en. В Yii 2 уже встроен компонент отвечающий за интернационализацию, называется он i18n. Для того что бы можно было начать им пользоваться, достаточно добавить его в конфигурацию пр...</summary>
   </entry>
   <entry>
     <id>http://atoumus.github.io/yii2-flash-messages.html</id>
@@ -74,7 +74,7 @@
       <email>atoumus@gmail.com</email>
       <uri>http://atoumus.github.io/</uri>
     </author>
-    <summary>Как отображать простейшие пользовательские уведомления на сайте с использованием фреймворка Yii2. Немного теории Флеш сообщения в данном случае - это уведомления отображаемые пользователю при каких либо событиях. В Yii2 уже встроен механизм для работы с ф...</summary>
+    <summary>Как отображать простейшие пользовательские уведомления на сайте с использованием фреймворка Yii 2. Немного теории Флеш сообщения в данном случае - это уведомления отображаемые пользователю при каких либо событиях. В Yii 2 уже встроен механизм для работы с...</summary>
   </entry>
   <entry>
     <id>http://atoumus.github.io/yii2-basic-advanced.html</id>
@@ -87,7 +87,7 @@
       <email>atoumus@gmail.com</email>
       <uri>http://atoumus.github.io/</uri>
     </author>
-    <summary>Yii2 предоставляет возможность начать разработку нового проекта с уже готового &amp;quot;каркаса&amp;quot;. На выбор предоставляется два шаблона приложения: basic и advanced. Об их отличиях и установке пойдет речь в этой статье. Шаблон приложения basic это &amp;quot;...</summary>
+    <summary>Yii 2 предоставляет возможность начать разработку нового проекта с уже готового &amp;quot;каркаса&amp;quot;. На выбор предоставляется два шаблона приложения: basic и advanced. Об их отличиях и установке пойдет речь в этой статье. Шаблон приложения basic это &amp;quot...</summary>
   </entry>
   <entry>
     <id>http://atoumus.github.io/book-web-dev-yii2.html</id>
@@ -234,7 +234,7 @@
   </entry>
   <entry>
     <id>http://atoumus.github.io/zend-framework-run-cron-scripts.html</id>
-    <title>Zend Framework 1 - запуск скриптов по cron'у</title>
+    <title>ZF 1 - запуск скриптов по cron'у</title>
     <link rel="alternate" type="text/html" href="http://atoumus.github.io/zend-framework-run-cron-scripts.html"/>
     <updated>2012-08-22T00:00:00+00:00</updated>
     <published>2012-08-22T00:00:00+00:00</published>
@@ -247,7 +247,7 @@
   </entry>
   <entry>
     <id>http://atoumus.github.io/zend-framework-1-setting-up-zend-tool-on-ubuntu.html</id>
-    <title>Zend Framework 1 - Настройка Zend Tool в Ubuntu</title>
+    <title>ZF 1 - Настройка Zend Tool в Ubuntu</title>
     <link rel="alternate" type="text/html" href="http://atoumus.github.io/zend-framework-1-setting-up-zend-tool-on-ubuntu.html"/>
     <updated>2012-08-14T00:00:00+00:00</updated>
     <published>2012-08-14T00:00:00+00:00</published>

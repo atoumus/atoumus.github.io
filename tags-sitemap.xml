@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
  <url>
   <loc>http://atoumus.github.io/</loc>
-  <lastmod>2018-03-04T06:57:25+02:00</lastmod>
+  <lastmod>2018-03-07T07:13:16+02:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
@@ -10,7 +10,7 @@
  </url>
  <url>
   <loc>http://atoumus.github.io/en/</loc>
-  <lastmod>2018-03-04T06:57:25+02:00</lastmod>
+  <lastmod>2018-03-07T07:13:16+02:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
@@ -36,6 +36,7 @@
   <changefreq>weekly</changefreq>
   <priority>0.2</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/Yii/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="http://atoumus.github.io/en/tag/Yii/"/>
  </url>
  <url>
   <loc>http://atoumus.github.io/tag/Books/</loc>
@@ -171,6 +172,14 @@
   <changefreq>weekly</changefreq>
   <priority>0.2</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/CSS/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/en/tag/Yii/</loc>
+  <lastmod>2016-08-10T00:00:00+03:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.2</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/tag/Yii/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="http://atoumus.github.io/en/tag/Yii/"/>
  </url>
  <url>
   <loc>http://atoumus.github.io/en/tag/VirtualBox/</loc>
