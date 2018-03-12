@@ -1,0 +1,161 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>Yii 2 - Sending emails using Swiftmailer | Atoumus Blog</title> <link rel="alternate" href="http://atoumus.github.io/yii2-swiftmailer.html" hreflang="ru" /> <link rel="alternate" href="http://atoumus.github.io/en/yii2-swiftmailer.html" hreflang="en" /> <link rel="alternate" type="application/atom+xml" title="Atoumus Blog" href="/en/atom.xml" /> <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> <link rel="stylesheet" type="text/css" href="/css/libs/flaticon/flaticon.css"> <link rel="stylesheet" type="text/css" href="/css/libs/prism.css"> <link rel="stylesheet" type="text/css" href="/css/libs/prism-fix.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css" /> <link rel="stylesheet" type="text/css" href="/css/common.css"> </head> <body> <a href="#top" class="elevator"><span class="flaticon-upwards-arrow"></span></a> <a name="top"></a> <div class="main"> <div class="header"> <a href="/en/" class="logo" title="Atoumus Blog" ><img src="/images/logo.png">Atoumus Blog</a> <form class="search" action="//google.com/search" target="_blank" method="get" accept-charset="UTF-8"> <input type="search" name="q" class="search-input"> <button type="submit">Search</button> <input type="hidden" name="sitesearch" value="http://atoumus.github.io"> </form> <div class="social"> <a href="#" class="search-toggle flaticon-magnifier" title="Search"></a> <a href="/en/atom.xml" target="_blank" class="flaticon-rss-feed-button" title="Atom feed"></a> <a href="https://twitter.com/atoumus/" target="_blank" class="flaticon-twitter-logo-silhouette" title="Twitter"></a> <a href="https://plus.google.com/u/0/116624784918762784912" target="_blank" class="flaticon-google-plus-logo-button" title="G+"></a> </div> </div> <div class="clear-both"></div> <div class="menu"> <div class="tags"> <a href='/en/'>Home</a><a href='/en/tag/Yii/' class='selected'>Yii</a><a href='/en/tag/VirtualBox/'>VirtualBox</a><a href='/en/tag/Vagrant/'>Vagrant</a> </div> <div class="lang-switcher"> <a href='/yii2-swiftmailer.html'>ru</a><span>en</span> </div> </div> <div class="clear-both"></div> <div class="contents"> <div class="article"> <h1>Yii 2 - Sending emails using Swiftmailer</h1> <div class="meta"> <div> <span class="flaticon-calendar-with-spring-binder-and-date-blocks"></span> 2016-08-20 </div> <div> <span class="flaticon-commerce"></span> <a href='/en/tag/Yii/'>Yii</a> </div> <div class="comments-number"> <span class="flaticon-comment-white-oval-bubble"></span> <a href="#comments" data-disqus-url="http://atoumus.github.io/en/yii2-swiftmailer.html"></a> </div> </div> <div class="clear-both"></div> <div class="text"><p>In Yii 2, the default component for sending emails is already built in, which is use Swiftmailer. Consider at the example of the fineness of work with this component, such as passing parameters to the layout and others.</p> <h2>Goals</h2> <p>It is necessary to configure the sending of letters, so that:</p> <ul> <li>they were not sent, but saved in a certain folder, because it is convenient for local debugging;</li> <li>using views and layouts of emails;</li> <li>passing parameters to the email layout it the same way as to the view;</li> <li>the sender was inserted by default;</li> <li>the name and email of the recipient were inserted;</li> <li>UTF-8 emails charset;</li> <li>two form of emails sending: HTML and plain-text.</li> </ul> <p>In this article will be used &quot;clean&quot; basic application template of Yii 2, which can be installed through Composer following <a target="_blank" href="/en/yii2-basic-advanced.html">this instruction</a>.</p> <h2>Configuring</h2> <p>Begin implementation with the write settings to the config file <code>\config\web.php</code>:</p> <pre class="line-numbers"><code class="language-php">...
+'components' =&gt; [
+    ...
+    'mailer' =&gt; [
+        'class' =&gt; 'yii\swiftmailer\Mailer',
+        'viewPath' =&gt; '@app/mail',
+        'htmlLayout' =&gt; 'layouts/main-html',
+        'textLayout' =&gt; 'layouts/main-text',
+        'messageConfig' =&gt; [
+            'charset' =&gt; 'UTF-8',
+            'from' =&gt; ['noreply@site.com' =&gt; 'Site Name'],
+        ],
+        'useFileTransport' =&gt; true,
+    ],
+    ...
+]
+...</code></pre> <p>In this configuration:</p> <ul> <li><code>viewPath</code> - path of email views;</li> <li><code>htmlLayout</code> and <code>textLayout</code> - email layouts, HTML and plain-text versions respectively;</li> <li><code>messageConfig -&gt; charset</code> - UTF-8 emails charset;</li> <li><code>messageConfig -&gt; from</code> - email and name of the sender by default;</li> <li><code>useFileTransport</code> - set this flag for saving emails to directory <code>\runtime\mail</code>, instead of real sending;</li> </ul> <p>Why are set the two versions of layouts, HTML and plain-text? In general, this is not necessary, but it is desirable. Because when sending an email, both versions will be attached to it. If user application, with the help of which he reads emails, supports HTML markup, will be displayed HTML version, otherwise plain-text. Of course, in today's time most applications supports the HTML emails, but probably it is better and for online email services, perhaps this will reduce the probability of getting into spam, if will arises such situation.</p> <h2>Adding layout</h2> <p>According to the configuration of the above, layouts will be located in a directory <code>\mail\layouts</code>.</p> <p>In the basic application template of Yii 2, which using in this article, already has one layout <code>html.php</code>, it is does not fit, delete it.</p> <p>Further create a two new layouts, HTML and plain-text. HTML version must located in the file <code>\mail\layouts\main-html.php</code>:</p> <pre class="line-numbers"><code class="language-php">&lt;?php
+use yii\helpers\Html;
+
+/* @var $this \yii\web\View view component instance */
+/* @var $message \yii\mail\MessageInterface the message being composed */
+/* @var $content string main view render result */
+?&gt;
+&lt;?php $this-&gt;beginPage() ?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=&lt;?= Yii::$app-&gt;charset ?&gt;" /&gt;
+    &lt;title&gt;&lt;?= Html::encode($this-&gt;title) ?&gt;&lt;/title&gt;
+    &lt;?php $this-&gt;head() ?&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;?php $this-&gt;beginBody() ?&gt;
+
+    &lt;h4&gt;Hello &lt;?= $this-&gt;params['userName'] ?&gt;&lt;/h4&gt;
+
+    &lt;?= $content ?&gt;
+
+    &lt;?php $this-&gt;endBody() ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;?php $this-&gt;endPage() ?&gt;</code></pre> <p>The plain-text version must located in the file <code>\mail\layouts\main-text.php</code>:</p> <pre class="line-numbers"><code class="language-php">&lt;?php
+
+/* @var $this \yii\web\View view component instance */
+/* @var $message \yii\mail\MessageInterface the message being composed */
+/* @var $content string main view render result */
+
+?&gt;
+Hello &lt;?= $this-&gt;params['userName'] ?&gt;
+
+&lt;?= $content ?&gt;</code></pre> <p>In this layouts, <code>&lt;?= $this-&gt;params['userName'] ?&gt;</code> - it is parameters passing, user name in this case.</p> <h2>Adding view</h2> <p>Now will add test email view. As well as with layouts, for views need creates two versions: HTML and plain-text. Create file <code>\mail\views\example-html.php</code>, which will be contents HTML version of email:</p> <pre class="line-numbers"><code class="language-php">&lt;?php
+
+/** @var $this \yii\web\View */
+/** @var $link string */
+/** @var $paramExample string */
+
+?&gt;
+&lt;p&gt;Email text...&lt;/p&gt;
+
+&lt;p&gt;Some passed parameter: &lt;?= $paramExample ?&gt;&lt;/p&gt;</code></pre> <p>Also create file <code>\mail\views\example-text.php</code>, which contents the plain-text version of email:</p> <pre class="line-numbers"><code class="language-php">&lt;?php
+
+/** @var $this \yii\web\View */
+/** @var $link string */
+/** @var $paramExample string */
+
+?&gt;
+Email text...
+
+Some passed parameter: &lt;?= $paramExample ?&gt;</code></pre> <p>In this views is present a parameter <code>&lt;?= $paramExample ?&gt;</code>, which will be pass to the email as example, to show how exactly the parameters are passed to the email.</p> <h2>User model preparing</h2> <p>In the basic application template of Yii 2, already has the model <code>\models\User.php</code>, which intended for work with users. But it is a simplified, and even do not interacts with DB. For the example described in this article, this simplified model is enough. The only thing missing in it is the email address field, which would show the email address of the user, add it:</p> <pre class="line-numbers"><code class="language-php">&lt;?php
+
+namespace app\models;
+
+class User extends \yii\base\Object implements \yii\web\IdentityInterface
+{
+    ...
+    public $email;
+    ...
+
+    private static $users = [
+        '100' =&gt; [
+            ...
+            'email' =&gt; 'admin@site.com',
+            ...
+        ],
+        '101' =&gt; [
+            ...
+            'email' =&gt; 'demo@site.com',
+            ...
+        ],
+    ];
+
+    ...
+}</code></pre> <p>Now all users, there are now two: admin and demo, have the <code>email</code> fields with contents their email addresses.</p> <h2>Create method for email sending</h2> <p>Now we come to the most important, writing a method for sending emails to users. For convenience, this method will be located in the user model, i.e. in the class <code>app\models\User</code>. Open the file <code>\models\User.php</code> containing the user model class, and add a new method to its end:</p> <pre class="line-numbers"><code class="language-php">&lt;?php
+
+namespace app\models;
+
+class User extends \yii\base\Object implements \yii\web\IdentityInterface
+{
+    ...
+
+    /**
+     * @param string $view
+     * @param string $subject
+     * @param array $params
+     * @return bool
+     */
+    public function sendMail($view, $subject, $params = []) {
+        // Set layout params
+        \Yii::$app-&gt;mailer-&gt;getView()-&gt;params['userName'] = $this-&gt;username;
+
+        $result = \Yii::$app-&gt;mailer-&gt;compose([
+            'html' =&gt; 'views/' . $view . '-html',
+            'text' =&gt; 'views/' . $view . '-text',
+        ], $params)-&gt;setTo([$this-&gt;email =&gt; $this-&gt;username])
+            -&gt;setSubject($subject)
+            -&gt;send();
+
+        // Reset layout params
+        \Yii::$app-&gt;mailer-&gt;getView()-&gt;params['userName'] = null;
+
+        return $result;
+    }
+}</code></pre> <p>Let's consider in detail what happens in this method.</p> <p>In the next section of the code, the parameters are passed to the layout, in this case the user name:</p> <pre><code class="language-php">// Set layout params
+\Yii::$app-&gt;mailer-&gt;getView()-&gt;params['userName'] = $this-&gt;username;</code></pre> <p>Besides an user name, of course can pass any other parameters.</p> <p>After the <code>send()</code> method was called and the email was sent, you must clear the parameters, which were passed to the layout, this is done in this section of the code:</p> <pre><code class="language-php">// Reset layout params
+\Yii::$app-&gt;mailer-&gt;getView()-&gt;params['userName'] = null;</code></pre> <p>This cleaning is necessary in order that these parameters can not be passed to the next email, which can be sent from the other code place.</p> <p>As described above, it is necessary that would be sent two versions of the email for the user: HTML and plain-text. For this in the <code>compose()</code> method is necessary to specify a two kinds of a view, first for HTML version of the email, second for plain-text:</p> <pre class="line-numbers"><code class="language-php">$result = \Yii::$app-&gt;mailer-&gt;compose([
+    'html' =&gt; 'views/' . $view . '-html',
+    'text' =&gt; 'views/' . $view . '-text',
+], $params)</code></pre> <p>In the <code>setTo()</code> method, the name and email address of the recipient are passed as an array:</p> <pre><code class="language-php">setTo([$this-&gt;email =&gt; $this-&gt;username])</code></pre> <h2>Sending test email</h2> <p>It's time to check how the email is sent and in what form it comes. To do this, add the new method in the controller <code>app\controllers\SiteController</code>:</p> <pre class="line-numbers"><code class="language-php">...
+class SiteController extends Controller
+{
+    ...
+    public function actionTestMailer() {
+        \app\models\User::findByUsername('admin')-&gt;sendMail('example', 'Email example', ['paramExample' =&gt; '123']);
+    }
+    ...
+}</code></pre> <p>Due to the fact that we added a method of sending an email to the user model, we can, after searching the user <code>findByUsername('admin')</code> immediately send him an email using the <code>sendMail()</code> method. The convenience of this approach is that we do not need to pass the recipient's name and email address manually, since this data will be available in the user model, in which we have the method of sending the email <code>sendMail()</code>. And for that in this method to substitute the name and email address of the recipient, in this case, the user of which we just found using the <code>\app\models\User::findByUsername('admin')</code> method, you can simply use the corresponding class fields: <code>$this-&gt;username</code> and <code>$this-&gt;email</code>.</p> <p>Now consider the parameters that need to be passed to the <code>sendMail()</code> method. The first parameter was passed to <code>'example'</code> - this is the alias of the email <code>view</code>. Second parameter - <code>Email example</code> - this is email subject. Third parameter - <code>['paramExample' =&gt; '123']</code> - this is vars, which will be passed to the email, in this case we have only one variable in the email view, which we use for the example, that would show how the parameters are transferred from the code to the email.</p> <p>This concludes the implementation of the action <code>actionTestMailer()</code> is done, it's time to open it in the browser and check what the sent email will look like. Open the browser and go to the address like: <code>/index.php?r=site/test-mailer</code>, the most likely to appear is a blank page, it should be so.</p> <p>Now let's check how the email is displayed. But in our case it was not sent anywhere, but should have been saved in the folder <code>\runtime\mail</code>. As you can see, as a result, all the parameters that we passed where substituted in the email, also a layout was applied.</p> <h2>Configuring SMTP</h2> <p>In order to achieve the goal, it remains to configure the email sending through SMTP.</p> <p>In order for Swiftmailer to start sending emails via SMTP, you need to make some changes in the config <code>\config\web.php</code>:</p> <pre class="line-numbers"><code class="language-php">...
+'components' =&gt; [
+    ...
+    'mailer' =&gt; [
+        ...
+        'messageConfig' =&gt; [
+            ...
+            'from' =&gt; ['your@email.com' =&gt; 'test-user'],
+            ...
+        ],
+        ...
+        'useFileTransport' =&gt; false,
+        ...
+        'transport' =&gt; [
+            'class' =&gt; 'Swift_SmtpTransport',
+            'host' =&gt; 'smtp.some-host.com',
+            'username' =&gt; 'test-user',
+            'password' =&gt; 'test-user-password',
+            'port' =&gt; '465',
+            'encryption' =&gt; 'ssl',
+        ],
+        ...
+    ],
+    ...
+]
+...</code></pre> <p>What changes were made:</p> <ul> <li><code>messageConfig -&gt; from</code> - here you must specify the email address that is used for sending emails;</li> <li><code>'useFileTransport' =&gt; false</code> - disable saving emails to the folder <code>\runtime\mail</code>;</li> <li>in the <code>transport</code> section, set the SMTP server settings from which the mail will be sent.</li> </ul> <p>This completes the SMTP setup, in order to check how to send the email, just open the browser's address <code>/index.php?r=site/test-mailer</code>.</p></div> <div class="related"> <h2>Read also</h2> <a href="/en/yii2-basic-advanced.html" target="_blank" >Yii 2 - Installation basic and advanced application templates via Composer</a> </div> <div class="share">Share: <script type="text/javascript">(function () { if (window.pluso) if (typeof window.pluso.start == "function") return; if (window.ifpluso == undefined) { window.ifpluso = 1; var d = document, s = d.createElement('script'), g = 'getElementsByTagName'; s.type = 'text/javascript'; s.charset = 'UTF-8'; s.async = true; s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js'; var h = d[g]('body')[0]; h.appendChild(s); } })();</script> <div class="pluso" data-background="transparent" data-options="small,round,line,horizontal,counter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print"></div></div>   <div class="comments"> <a name="comments"></a> <div id="disqus_thread"></div> <script> var disqus_config = function () { this.page.url = "http://atoumus.github.io/en/yii2-swiftmailer.html"; this.page.identifier = "yii2-swiftmailer"; this.language = "en"; }; (function() { var d = document, s = d.createElement('script'); s.src = 'https://atoumus.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })(); </script> <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> </div> </div> </div> <div class="footer"> <div class="left"> <div class="social"> <a href="#" class="icon search-toggle flaticon-magnifier" title="Search"></a> <a href="/en/atom.xml" target="_blank" class="icon flaticon-rss-feed-button" title="Atom feed"></a> <a href="https://twitter.com/atoumus/" target="_blank" class="icon flaticon-twitter-logo-silhouette" title="Twitter"></a> <a href="https://plus.google.com/u/0/116624784918762784912" target="_blank" class="icon flaticon-google-plus-logo-button" title="G+"></a> </div> <div class="author-email"> <a data-email-array='{"3":"u","12":"l","15":"o","8":"g","14":"c","5":"u","13":".","16":"m","9":"m","7":"@","10":"a","4":"m","6":"s","1":"t","2":"o","0":"a","11":"i"}' href="#"></a> </div> <div class="donate"> <a href="https://money.yandex.ru/to/410015801161863" target="_blank">Donate</a> </div> </div> <div class="right"> <div>  <script type="text/javascript"> document.write("<a href='//www.liveinternet.ru/click' "+ "target=_blank><img src='//counter.yadro.ru/hit?t25.5;r"+ escape(document.referrer)+((typeof(screen)=="undefined")?"": ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth? screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+ ";"+Math.random()+ "' alt='' title='LiveInternet: показано число посетителей за"+ " сегодня' "+ "border='0' width='88' height='15'><\/a>") </script>  </div> <div> Atoumus Blog &copy; 2011 - 2018 </div> <div> Copy and citation with necessarily URL link to original page </div> </div> </div> <div class="clear-both"></div> </div> <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script> <script type="text/javascript" src="/js/libs/prism.js"></script> <script type="text/javascript" src="/js/common.js"></script> </body> </html>
