@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
  <url>
   <loc>http://atoumus.github.io/</loc>
-  <lastmod>2018-03-12T06:56:42+02:00</lastmod>
+  <lastmod>2018-03-19T07:47:31+02:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
@@ -10,11 +10,18 @@
  </url>
  <url>
   <loc>http://atoumus.github.io/en/</loc>
-  <lastmod>2018-03-12T06:56:42+02:00</lastmod>
+  <lastmod>2018-03-19T07:47:31+02:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
   <xhtml:link rel="alternate" hreflang="en" href="http://atoumus.github.io/en/"/>
+ </url>
+ <url>
+  <loc>http://atoumus.github.io/php-tech-ratings.html</loc>
+  <lastmod>2018-03-18T00:00:00+02:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/php-tech-ratings.html"/>
  </url>
  <url>
   <loc>http://atoumus.github.io/37-rules-for-effective-learning.html</loc>
@@ -22,13 +29,6 @@
   <changefreq>monthly</changefreq>
   <priority>0.6</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/37-rules-for-effective-learning.html"/>
- </url>
- <url>
-  <loc>http://atoumus.github.io/2017-php-trends.html</loc>
-  <lastmod>2017-10-03T00:00:00+03:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.6</priority>
-  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/2017-php-trends.html"/>
  </url>
  <url>
   <loc>http://atoumus.github.io/yii2-swiftmailer.html</loc>
@@ -109,13 +109,6 @@
   <changefreq>monthly</changefreq>
   <priority>0.6</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/test-site-by-other-country-ip.html"/>
- </url>
- <url>
-  <loc>http://atoumus.github.io/2016-php-trends.html</loc>
-  <lastmod>2016-02-05T00:00:00+02:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.6</priority>
-  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/2016-php-trends.html"/>
  </url>
  <url>
   <loc>http://atoumus.github.io/php-write-read-binary-files.html</loc>

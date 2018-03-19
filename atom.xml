@@ -3,7 +3,7 @@
   <generator uri="https://github.com/miniflux/picoFeed">PicoFeed</generator>
   <title>Atoumus Blog</title>
   <id>http://atoumus.github.io/atom.xml</id>
-  <updated>2018-03-12T04:56:42+00:00</updated>
+  <updated>2018-03-19T05:47:32+00:00</updated>
   <link rel="alternate" type="text/html" href="http://atoumus.github.io/"/>
   <link rel="self" type="application/atom+xml" href="http://atoumus.github.io/atom.xml"/>
   <author>
@@ -11,6 +11,19 @@
     <email>atoumus@gmail.com</email>
     <uri>http://atoumus.github.io/</uri>
   </author>
+  <entry>
+    <id>http://atoumus.github.io/php-tech-ratings.html</id>
+    <title>PHP Full Stack Developer - требования и рейтинг технологий</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/php-tech-ratings.html"/>
+    <updated>2018-03-18T00:00:00+00:00</updated>
+    <published>2018-03-18T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Что должен знать современный PHP разработчик? Минимум технологий, это: HTML, CSS, PHP, MySQL, JavaScript и jQuery. Но это самые основы, которых сейчас уже недостаточно для того что бы быть конкурентно способным. Web-разработка, и конкретно PHP, развиваютс...</summary>
+  </entry>
   <entry>
     <id>http://atoumus.github.io/37-rules-for-effective-learning.html</id>
     <title>37 правил для эффективного обучения</title>
@@ -23,19 +36,6 @@
       <uri>http://atoumus.github.io/</uri>
     </author>
     <summary>Недавно нашел интересное видео на YouTube, в котором собраны 37 правил для эффективного обучения. Этот список правил оказался очень полезным, можно сказать что в нем собрано и сконцентрировано все то что нужно знать человеку, который занимается самообучен...</summary>
-  </entry>
-  <entry>
-    <id>http://atoumus.github.io/2017-php-trends.html</id>
-    <title>Что учить PHP разработчику в 2017 году</title>
-    <link rel="alternate" type="text/html" href="http://atoumus.github.io/2017-php-trends.html"/>
-    <updated>2017-10-03T00:00:00+00:00</updated>
-    <published>2017-10-03T00:00:00+00:00</published>
-    <author>
-      <name>atoumus</name>
-      <email>atoumus@gmail.com</email>
-      <uri>http://atoumus.github.io/</uri>
-    </author>
-    <summary>Что должен знать современный PHP разработчик? Минимум технологий, это: HTML, CSS, PHP, MySQL, JavaScript и jQuery. Но это самые основы, которых сейчас уже недостаточно для того что бы быть конкурентно способным. Web разработка, и конкретно PHP, развиваютс...</summary>
   </entry>
   <entry>
     <id>http://atoumus.github.io/yii2-swiftmailer.html</id>
@@ -179,19 +179,6 @@
       <uri>http://atoumus.github.io/</uri>
     </author>
     <summary>Иногда возникает необходимость зайти на свой сайт под IP другой страны. Например что бы проверить ту или иную функциональность, которая работает по разному в зависимости с IP какой страны зашел пользователь. В этой статье будут рассмотрены способы как это...</summary>
-  </entry>
-  <entry>
-    <id>http://atoumus.github.io/2016-php-trends.html</id>
-    <title>Что учить PHP разработчику в 2016 году</title>
-    <link rel="alternate" type="text/html" href="http://atoumus.github.io/2016-php-trends.html"/>
-    <updated>2016-02-05T00:00:00+00:00</updated>
-    <published>2016-02-05T00:00:00+00:00</published>
-    <author>
-      <name>atoumus</name>
-      <email>atoumus@gmail.com</email>
-      <uri>http://atoumus.github.io/</uri>
-    </author>
-    <summary>Что должен знать современный PHP разработчик? Минимум технологий, это: HTML, CSS, PHP, MySQL, JavaScript и jQuery. Но это самые основы, которых сейчас уже недостаточно для того что бы быть конкурентно способным. Web разработка, и конкретно PHP, развиваютс...</summary>
   </entry>
   <entry>
     <id>http://atoumus.github.io/php-write-read-binary-files.html</id>
