@@ -3,7 +3,7 @@
   <generator uri="https://github.com/miniflux/picoFeed">PicoFeed</generator>
   <title>Atoumus Blog</title>
   <id>http://atoumus.github.io/atom.xml</id>
-  <updated>2018-03-23T05:32:55+00:00</updated>
+  <updated>2018-03-26T04:09:12+00:00</updated>
   <link rel="alternate" type="text/html" href="http://atoumus.github.io/"/>
   <link rel="self" type="application/atom+xml" href="http://atoumus.github.io/atom.xml"/>
   <author>
@@ -143,7 +143,7 @@
   </entry>
   <entry>
     <id>http://atoumus.github.io/php-detect-country-by-ip.html</id>
-    <title>PHP - получаем гео-инфо пользователя по IP</title>
+    <title>PHP - Получаем гео-инфо пользователя по IP</title>
     <link rel="alternate" type="text/html" href="http://atoumus.github.io/php-detect-country-by-ip.html"/>
     <updated>2016-03-16T00:00:00+00:00</updated>
     <published>2016-03-16T00:00:00+00:00</published>
@@ -220,8 +220,60 @@
     <summary>Зачастую требуется находить в PHP скриптах те места кода, которые создают наибольшую нагрузку. Для того что это сделать, мы будем использовать XDebug. Этот инструмент создает лог работы PHP скрипта в своем специфическом формате. Для того что бы этот лог м...</summary>
   </entry>
   <entry>
+    <id>http://atoumus.github.io/zf-1-integration-with-netbeans.html</id>
+    <title>ZF 1 - Интеграция c NetBeans</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/zf-1-integration-with-netbeans.html"/>
+    <updated>2012-12-15T00:00:00+00:00</updated>
+    <published>2012-12-15T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Zend Framework предоставляет удобный инструмент Zend Tool, предназначенный для быстрого создания проекта, контроллеров, моделей и пр. элементов приложения. В NetBeans есть возможность настроить взаимодействие с Zend Tool. В данной статье речь пойдет о нас...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/drupal-7-setting-up-friendly-url.html</id>
+    <title>Drupal 7 - Настройка ЧПУ</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/drupal-7-setting-up-friendly-url.html"/>
+    <updated>2012-10-13T00:00:00+00:00</updated>
+    <published>2012-10-13T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>В предыдущей статье &amp;quot;Drupal 7 - Создание списка рубрик&amp;quot; было рассмотрено как создать список рубрик для сайта. Эта статья является дополнением к предыдущей. В ней будет рассмотрено, как настроить ЧПУ для сайта на Drupal 7, что бы адрес страницы и...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/tortoise-hg-bug.html</id>
+    <title>TortoiseHg - Баг UnicodeEncodeError в Workbench под Ubuntu</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/tortoise-hg-bug.html"/>
+    <updated>2012-10-01T00:00:00+00:00</updated>
+    <published>2012-10-01T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Столкнулся с багом в TortoiseHg в Workbench под Ubuntu. С определенного момента, при запуске TortoiseHg Workbench начало выводиться окно с ошибкой: {{{ #!python ** Mercurial version (2.3.1). TortoiseHg version (2.5+26-87dfb02f6ddd) ** Command: -R /home/us...</summary>
+  </entry>
+  <entry>
+    <id>http://atoumus.github.io/objective-j-sublime-text-highlighting.html</id>
+    <title>Objective-J - Подсветка синтаксиса в Sublime Text</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/objective-j-sublime-text-highlighting.html"/>
+    <updated>2012-09-22T00:00:00+00:00</updated>
+    <published>2012-09-22T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>Sublime Text позволяет установить плагин, для подсветки синтаксиса языка Objective-J (Cappuccino). В этой небольшой заметке, пойдет речь о том, как это сделать. Первым делом необходимо установить Sublime Package Control. Для этого запустите ваш Sublime Te...</summary>
+  </entry>
+  <entry>
     <id>http://atoumus.github.io/zend-framework-run-cron-scripts.html</id>
-    <title>ZF 1 - запуск скриптов по cron'у</title>
+    <title>ZF 1 - Запуск скриптов по cron'у</title>
     <link rel="alternate" type="text/html" href="http://atoumus.github.io/zend-framework-run-cron-scripts.html"/>
     <updated>2012-08-22T00:00:00+00:00</updated>
     <published>2012-08-22T00:00:00+00:00</published>
