@@ -1,0 +1,1 @@
+(function(n){jQuery.fn.bannersRotate=function(){var t,i=null,e=0,u=null,r=function(){t=n(this).children();if(t.length>0){l()}},l=function(){if(i!=null){clearTimeout(i)};if(u!=null){n(t[u]).hide()};var r=n(t[e]);r.show();i=setTimeout(function(){l()},parseInt(r.data('duration'))*1000);u=e;e=t.length-1==e?0:e+1};return this.each(r)}})(jQuery);
