@@ -3,7 +3,7 @@
   <generator uri="https://github.com/miniflux/picoFeed">PicoFeed</generator>
   <title>Atoumus Blog</title>
   <id>http://atoumus.github.io/atom.xml</id>
-  <updated>2018-04-16T12:08:17+00:00</updated>
+  <updated>2018-04-17T03:32:16+00:00</updated>
   <link rel="alternate" type="text/html" href="http://atoumus.github.io/"/>
   <link rel="self" type="application/atom+xml" href="http://atoumus.github.io/atom.xml"/>
   <author>
@@ -230,7 +230,7 @@
       <email>atoumus@gmail.com</email>
       <uri>http://atoumus.github.io/</uri>
     </author>
-    <summary>В интернете существует множество jQuery плагинов разной функциональности. В том числе различных каруселей и ротаторов. Но в основном они переключают контент через равные промежутки времени. Для ротации GIF и Flash баннеров требуется переключение через раз...</summary>
+    <summary>Существует множество различных jQuery плагинов каруселей. Но в основном они переключают контент через равные промежутки времени. Для ротации GIF и Flash баннеров требуется переключение через разные промежутки времени, потому что у баннеров разное время пр...</summary>
   </entry>
   <entry>
     <id>http://atoumus.github.io/zf-1-integration-with-netbeans.html</id>
