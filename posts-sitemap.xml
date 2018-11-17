@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
  <url>
   <loc>http://atoumus.github.io/</loc>
-  <lastmod>2018-04-17T06:32:16+03:00</lastmod>
+  <lastmod>2018-11-17T22:40:06+02:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
@@ -10,7 +10,7 @@
  </url>
  <url>
   <loc>http://atoumus.github.io/en/</loc>
-  <lastmod>2018-04-17T06:32:16+03:00</lastmod>
+  <lastmod>2018-11-17T22:40:06+02:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/"/>
@@ -22,13 +22,6 @@
   <changefreq>monthly</changefreq>
   <priority>0.6</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/php-tech-ratings.html"/>
- </url>
- <url>
-  <loc>http://atoumus.github.io/37-rules-for-effective-learning.html</loc>
-  <lastmod>2017-12-15T00:00:00+02:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.6</priority>
-  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/37-rules-for-effective-learning.html"/>
  </url>
  <url>
   <loc>http://atoumus.github.io/yii2-swiftmailer.html</loc>
@@ -97,13 +90,6 @@
   <changefreq>monthly</changefreq>
   <priority>0.6</priority>
   <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/php-detect-country-by-ip.html"/>
- </url>
- <url>
-  <loc>http://atoumus.github.io/art-of-mind.html</loc>
-  <lastmod>2016-03-16T00:00:00+02:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.6</priority>
-  <xhtml:link rel="alternate" hreflang="ru" href="http://atoumus.github.io/art-of-mind.html"/>
  </url>
  <url>
   <loc>http://atoumus.github.io/test-site-by-other-country-ip.html</loc>
