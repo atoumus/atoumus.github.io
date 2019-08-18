@@ -3,7 +3,7 @@
   <generator uri="https://github.com/miniflux/picoFeed">PicoFeed</generator>
   <title>Atoumus Blog</title>
   <id>http://atoumus.github.io/atom.xml</id>
-  <updated>2018-11-17T21:01:38+00:00</updated>
+  <updated>2019-08-18T11:42:24+00:00</updated>
   <link rel="alternate" type="text/html" href="http://atoumus.github.io/"/>
   <link rel="self" type="application/atom+xml" href="http://atoumus.github.io/atom.xml"/>
   <author>
@@ -11,6 +11,19 @@
     <email>atoumus@gmail.com</email>
     <uri>http://atoumus.github.io/</uri>
   </author>
+  <entry>
+    <id>http://atoumus.github.io/php7.3-main-innovations.html</id>
+    <title>PHP 7.3 - Основные нововведения</title>
+    <link rel="alternate" type="text/html" href="http://atoumus.github.io/php7.3-main-innovations.html"/>
+    <updated>2018-12-15T00:00:00+00:00</updated>
+    <published>2018-12-15T00:00:00+00:00</published>
+    <author>
+      <name>atoumus</name>
+      <email>atoumus@gmail.com</email>
+      <uri>http://atoumus.github.io/</uri>
+    </author>
+    <summary>6 декабря 2018 года вышел минорный релиз PHP 7.3. Далее, в порядке от более важного к менее важному, будут кратко рассмотрены основные нововведения в данном релизе PHP. Выброс исключений при ошибках в функциях json_encode() и json_decode() Если раньше нуж...</summary>
+  </entry>
   <entry>
     <id>http://atoumus.github.io/php-tech-ratings.html</id>
     <title>PHP Full Stack Web Dev - требования и рейтинг технологий</title>
@@ -22,7 +35,7 @@
       <email>atoumus@gmail.com</email>
       <uri>http://atoumus.github.io/</uri>
     </author>
-    <summary>Что должен знать современный PHP разработчик? Минимум технологий, это: HTML, CSS, PHP, MySQL, JavaScript и jQuery. Но это самые основы, которых сейчас уже недостаточно для того что бы быть конкурентно способным. Web-разработка, и конкретно PHP, развиваютс...</summary>
+    <summary>Требования по вакансиям с сайта hh.ru....</summary>
   </entry>
   <entry>
     <id>http://atoumus.github.io/yii2-swiftmailer.html</id>
